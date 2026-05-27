@@ -1,6 +1,5 @@
 :root {
   font-size: 62.5%;
-  scroll-behavior: smooth;
   /* background-color: #111;
   color: #FFF; */
   color: #111;
@@ -44,6 +43,14 @@ a {
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-color: transparent;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+  overflow-y: scroll;
 }
 
 .header {
@@ -170,12 +177,12 @@ a {
 
 .section {
   height: 100vh;
-  scroll-snap-align: start;
   padding: 0 12px;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  scroll-snap-align: start;
 }
 
 .section_centered {
