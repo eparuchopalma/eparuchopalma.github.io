@@ -1,7 +1,7 @@
 [
   {
     "title": "Luthen",
-    "description": "A financial log web application. Save records, create funds, check your stats.",
+    "description": "Financial log. Save records, manage them in different funds, measure your movements.",
     "desktopCover": "assets/luthen_desktop.png",
     "mobileCover": "assets/luthen_mobile.png",
     "stack": ["TypeScript", "Vue.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
@@ -13,7 +13,7 @@
   },
   {
     "title": "Mantra",
-    "description": "Custom-made Help Desk Web Application for Microfilms Center.",
+    "description": "The Help Desk Web Application used by Microfilms Center.",
     "desktopCover": "assets/mantra_desktop.png",
     "mobileCover": "assets/mantra_mobile.png",
     "stack": ["Vue.js", "Vuetify.js", "Vuex", "Vue Router", "Node.js", "Express.js", "MongoDB"],
@@ -25,10 +25,10 @@
   },
   {
     "title": "Lighthouse",
-    "description": "2: Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "description": "Habit tracker. Add habits and start creating records to follow up.",
     "desktopCover": "assets/project-placeholder-2.png",
     "mobileCover": "assets/luthen_mobile.png",
-    "stack": ["TypeScript", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
+    "stack": ["TypeScript", "React.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
     "links": {
       "demo": "#",
       "code": "#",
@@ -37,10 +37,10 @@
   },
   {
     "title": "Pensive",
-    "description": "3: Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    "desktopCover": "assets/project-placeholder-3.png",
-    "mobileCover": "assets/luthen_mobile.png",
-    "stack": ["TypeScript", "Node.js", "Express.js", "PostgreSQL", "Redis"],
+    "description": "Note taking web application. Save quotes, concepts, add references, keywords to relate them.",
+    "desktopCover": "assets/pensive_desktop.png",
+    "mobileCover": "assets/pensive_mobile.png",
+    "stack": ["TypeScript", "Vue.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
     "links": {
       "demo": "#",
       "code": "#",
