@@ -26,8 +26,8 @@
   {
     "title": "Lighthouse",
     "description": "Habit tracker. Add habits and start creating records to follow up.",
-    "desktopCover": "assets/project-placeholder-2.png",
-    "mobileCover": "assets/luthen_mobile.png",
+    "desktopCover": "assets/lighthouse_desktop.png",
+    "mobileCover": "assets/lighthouse_mobile.png",
     "stack": ["TypeScript", "React.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
     "links": {
       "demo": "#",
