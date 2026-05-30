@@ -13,18 +13,18 @@
   <main class="scroll-container">
 
     <header class="header">
-      <h1 class="header__title">
-        <span class="header__title_secondary header__title_left">EDGAR</span>
+      <h1 class="headline">
+        <span class="headline__label headline__label_left">EDGAR</span>
         PARUCHO
-        <span class="header__title_secondary header__title_right">PALMA</span>
+        <span class="headline__label headline__label_right">PALMA</span>
       </h1>
-      <strong class="header__subtitle">Web Developer</strong>
-      <p class="header__paragraph">I create good-looking, fine-tuned websites and applications.</p>
-      <div class="header__actions">
-        <a class="button button_secondary" href="#projects">Projects</a>
-        <a class="button button_primary" href="#contact">Contact info</a>
+      <strong class="subtitle">Web Developer</strong>
+      <p>I create good-looking, fine-tuned websites and applications.</p>
+      <div class="cta-container">
+        <a class="cta cta_secondary" href="#projects">Projects</a>
+        <a class="cta cta_primary" href="#contact">Contact info</a>
       </div>
-      <picture class="header__picture">
+      <picture class="picture-container">
         <source media="(min-width: 650px)" srcset="assets/author_lg.webp">
         <source media="(min-width: 465px)" srcset="assets/author_md.webp">
         <img
@@ -36,66 +36,69 @@
 
     <section class="section" id="projects">
       <h2 class="section__title">My Projects</h2>
-      <div class="flex-container">
+      <div class="section__first-pt">
         <ul id="title-container" class="project-title-container"></ul>
-        <div class="project-container">
-          <ul id="project-image-container" class="project-image-container"></ul>
-          <p id="project-description" class="project-description"></p>
-          <div id="label-container" class="label-container label-container_mt"></div>
-          <ul id="link-container" class="link-container">
-            <li>
-              <a href="#" class="link">Demo</a>
-            </li>
-            <li>
-              <a href="#" class="link">Code</a>
-            </li>
-            <li>
-              <a href="#" class="link">Design</a>
-            </li>
-          </ul>
-        </div>
+      </div>
+      <div class="section__second-pt">
+        <ul id="project-images-list" class="project-images-list"></ul>
+        <ul id="label-container" class="label-container label-container_mt"></ul>
+        <p id="project-description" class="project-description"></p>
+        <ul id="link-container" class="link-container">
+          <li>
+            <a href="#" class="link">Demo</a>
+          </li>
+          <li>
+            <a href="#" class="link">Code</a>
+          </li>
+          <li>
+            <a href="#" class="link">Design</a>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="section">
       <h2 class="section__title">About Me</h2>
-      <div class="section__flex">
-        <div class="section__bg">
-          <div class="section__picture"></div>
-        </div>
-        <div class="section__text">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <br>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <br>
-          <ul class="label-container">
-            <li class="label">HTML</li>
-            <li class="label">CSS</li>
-            <li class="label">JavaScript</li>
-            <li class="label">Vue.js</li>
-            <li class="label">TypeScript</li>
-            <li class="label">Node.js</li>
-            <li class="label">Express.js</li>
-          </ul>
-        </div>
+      <div class="section__first-pt">
+        <picture class="picture-container">
+          <source media="(min-width: 576px)" srcset="assets/setup_portrait.webp">
+          <img
+          src="assets/setup_landscape.png"
+          alt="A home office setup featuring a laptop displaying code, a row of books, a notebook, and a framed family photo on a wooden desk"
+          class="picture">
+        </picture>
+      </div>
+      <div class="section__second-pt">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <br>
+        <ul class="label-container">
+          <li class="label">HTML</li>
+          <li class="label">CSS</li>
+          <li class="label">JavaScript</li>
+          <li class="label">Vue.js</li>
+          <li class="label">TypeScript</li>
+          <li class="label">Node.js</li>
+          <li class="label">Express.js</li>
+        </ul>
       </div>
     </section>
 
-    <section id="contact" class="section section_centered">
-      <div>
-        <h2 class="section__title">Thank you</h2>
-        <p>for your priceless time</p>
-        <br>
-        <p>
-          <strong>Add me to your network</strong>
-          so we can have the opportunity to collaborate.
-        </p>
-        <div class="section__links">
-          <p class="email">eparuchopalma@outlook.com</p>
-          <a class="section__link section__link_linkedin" href="#">LinkedIn</a>
-          <a class="section__link section__link_github" href="#">GitHub</a>
-          <a class="section__link section__link_goodreads" href="#">Goodreads</a>
-        </div>
+    <section id="contact" class="section section_column">
+      <h2 class="section__title">Thank you</h2>
+      <br>
+      <p class="subtitle subtitle_sm">For your priceless time</p>
+      <br>
+      <p>
+        <strong>Add me to your network</strong>
+        so we can have the opportunity to collaborate.
+      </p>
+      <div class="section__links">
+        <p class="email">eparuchopalma@outlook.com</p>
+        <a class="section__link section__link_linkedin" href="#">LinkedIn</a>
+        <a class="section__link section__link_github" href="#">GitHub</a>
+        <a class="section__link section__link_goodreads" href="#">Goodreads</a>
       </div>
     </section>
   </main>

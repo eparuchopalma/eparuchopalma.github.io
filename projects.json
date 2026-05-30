@@ -16,7 +16,7 @@
     "description": "The Help Desk Web Application used by Microfilms Center.",
     "desktopCover": "assets/mantra_desktop.png",
     "mobileCover": "assets/mantra_mobile.png",
-    "stack": ["Vue.js", "Vuetify.js", "Vuex", "Vue Router", "Node.js", "Express.js", "MongoDB"],
+    "stack": ["Vue.js", "Vuetify.js", "Node.js", "Express.js", "MongoDB"],
     "links": {
       "demo": "#",
       "code": "#",

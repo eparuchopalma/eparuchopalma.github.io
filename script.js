@@ -1,7 +1,7 @@
 let projects;
 
 const titleContainer = document.getElementById('title-container');
-const imageContainer = document.getElementById('project-image-container');
+const imageContainer = document.getElementById('project-images-list');
 const description = document.getElementById('project-description');
 const labelContainer = document.getElementById('label-container');
 const links = document.getElementById('link-container');
@@ -41,7 +41,7 @@ function setLabels(index) {
     labelContainer.removeChild(labelContainer.firstChild);
   }
   for (const technology of projects[index].stack) {
-    const label = document.createElement('span');
+    const label = document.createElement('li');
     label.appendChild(document.createTextNode(technology));
     label.setAttribute('class', 'label');
     labelContainer.appendChild(label);
@@ -59,15 +59,15 @@ function setProjectTitle(index) {
 
 function setProjectImages(index) {
   const projectImages = document.createElement('li');
-  projectImages.setAttribute('class', 'project-image');
+  projectImages.setAttribute('class', 'project-images');
   projectImages.addEventListener('click', () => selectProject(index));
 
   const mobileImg = document.createElement('img');
-  mobileImg.setAttribute('class', 'project-image__mobile');
+  mobileImg.setAttribute('class', 'project-mobile-img');
   mobileImg.setAttribute('src', projects[index].mobileCover);
 
   const desktopImg = document.createElement('img');
-  desktopImg.setAttribute('class', 'project-image__desktop');
+  desktopImg.setAttribute('class', 'project-desktop-img');
   desktopImg.setAttribute('src', projects[index].desktopCover);
 
   projectImages.appendChild(desktopImg);
@@ -81,7 +81,7 @@ function styleProjectOnFocus(index) {
   titleContainer
     .children[index].setAttribute('class', 'project-title project-title_selected');
   imageContainer.children[index]
-    .setAttribute('class', 'project-image project-image_selected project-image_slide-from-right');
+    .setAttribute('class', 'project-images project-images_selected project-images_slide');
 }
 
 async function selectProject(i) {
@@ -110,7 +110,7 @@ async function selectProject(i) {
     const translationX = (index - selectedIndex) * 25;
     const timeOut = (index < selectedIndex) ? 400 : 100;
 
-    element.setAttribute('class', 'project-image');
+    element.setAttribute('class', 'project-images');
 
     new Promise((resolve, reject) => setTimeout(() => {
       element.setAttribute('style', `z-index: ${stackPosition}; transform: rotate(${rotationAngle}deg) translate(${translationX}px);`);
