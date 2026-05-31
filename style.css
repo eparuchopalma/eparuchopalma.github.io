@@ -217,6 +217,10 @@ a {
   place-content: center;
 }
 
+.section_dynamic-bg {
+  transition: background-color 1s;
+}
+
 .section__title {
   font-size: 6rem;
   font-weight: 600;
@@ -242,6 +246,7 @@ a {
 .project-title:hover {
   opacity: 1;
   cursor: pointer;
+  color: #111;
   background-color: #e7e7e7;
 }
 
@@ -254,6 +259,7 @@ a {
 }
 
 .project-title_selected:hover {
+  color: #fff;
   background-color: #111;
   opacity: 1;
   cursor: default;
@@ -434,8 +440,9 @@ a {
 }
 
 .link {
-  font-size: 1.6rem;
   color: #111;
+  text-decoration: underline;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 

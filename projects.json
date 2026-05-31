@@ -9,7 +9,10 @@
       "demo": "#",
       "code": "#",
       "design": "#"
-    }
+    },
+    "mainColor": "#242225",
+    "secondaryColor": "#BC5536",
+    "isDark": true
   },
   {
     "title": "Mantra",
@@ -21,7 +24,10 @@
       "demo": "#",
       "code": "#",
       "design": "#"
-    }
+    },
+    "mainColor": "#fff",
+    "secondaryColor": "#11BD56",
+    "isDark": false
   },
   {
     "title": "Lighthouse",
@@ -33,7 +39,10 @@
       "demo": "#",
       "code": "#",
       "design": "#"
-    }
+    },
+    "mainColor": "#F1F1F1",
+    "secondaryColor": "#202020",
+    "isDark": false
   },
   {
     "title": "Pensive",
@@ -45,6 +54,9 @@
       "demo": "#",
       "code": "#",
       "design": "#"
-    }
+    },
+    "mainColor": "#0f0f0f",
+    "secondaryColor": "#081919",
+    "isDark": true
   }
 ]

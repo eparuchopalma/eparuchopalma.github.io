@@ -1,5 +1,6 @@
 let projects;
 
+const projectsSection = document.getElementById('projects-section');
 const titleContainer = document.getElementById('title-container');
 const imageContainer = document.getElementById('project-images-list');
 const description = document.getElementById('project-description');
@@ -17,6 +18,7 @@ async function setProjects() {
 
   styleProjectOnFocus(0);
   setProjectText(0);
+  setProjectColors(0);
 }
 
 function getProjects() {
@@ -92,6 +94,7 @@ async function selectProject(i) {
   focusTitle(selectedIndex);
   styleProjectOnFocus(selectedIndex);
   setProjectText(selectedIndex);
+  setProjectColors(selectedIndex);
 
   await new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -121,9 +124,24 @@ async function selectProject(i) {
 
 function focusTitle(index) {
   const titleElement = titleContainer.children[index];
-  titleContainer.getElementsByClassName('project-title project-title_selected')[0].setAttribute('class', 'project-title');
+  const currentlyFocusTitle = titleContainer.getElementsByClassName('project-title project-title_selected')[0]
+  currentlyFocusTitle.setAttribute('class', 'project-title');
+  currentlyFocusTitle.removeAttribute('style');
   titleContainer.scrollTo({ top: index * 35, behavior: 'smooth' });
   titleElement.setAttribute('class', 'project-title project-title_selected');
+}
+
+function setProjectColors(i) {
+  const projectMainColor = projects[i].mainColor;
+  const projectThemeIsDark = projects[i].isDark;
+  const projectTitle = titleContainer.children[i];
+  const projectSecondaryColor = projects[i].secondaryColor;
+  let style = `background-color: ${projectMainColor}`;
+  if (projectThemeIsDark) style += '; color: white;';
+  console.log(style);
+  
+  projectsSection.setAttribute('style', style);
+  projectTitle.setAttribute('style', `background-color: ${projectSecondaryColor}`);
 }
 
 setProjects();
