@@ -43,12 +43,14 @@ a {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   scrollbar-color: transparent;
-  &::-webkit-scrollbar {
-    display: none;
-  }
   scrollbar-width: none;
+  will-change: transform;
   -ms-overflow-style: none; 
   overflow-y: scroll;
+}
+
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }
 
 .header {
@@ -99,7 +101,7 @@ a {
   text-align: center;
   margin: 0 auto;
   font-weight: 500;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   color: #fff;
   position: relative;
 }
