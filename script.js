@@ -22,7 +22,7 @@ async function setProjects() {
 }
 
 function getProjects() {
-  return fetch('./projects.json')
+  return fetch(projectsPath)
     .then(response => response.json())
     .then(json => projects = json)
 }

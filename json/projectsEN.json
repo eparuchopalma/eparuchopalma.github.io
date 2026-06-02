@@ -1,7 +1,7 @@
 [
   {
     "title": "Luthen",
-    "description": "Financial log. Save records, manage them in different funds, measure your movements.",
+    "description": "Financial log. Save records, manage them in different funds, analize your stats.",
     "desktopCover": "assets/luthen_desktop.png",
     "mobileCover": "assets/luthen_mobile.png",
     "stack": ["TypeScript", "Vue.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
@@ -15,7 +15,7 @@
   },
   {
     "title": "Mantra",
-    "description": "The Help Desk Web Application used by Microfilms Center.",
+    "description": "The Help Desk Web Application used by Microfilms Center from Venezuela.",
     "desktopCover": "assets/mantra_desktop.png",
     "mobileCover": "assets/mantra_mobile.png",
     "stack": ["Vue.js", "Vuetify.js", "Node.js", "Express.js", "MongoDB"],
