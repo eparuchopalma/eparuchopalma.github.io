@@ -7,7 +7,8 @@
     "stack": ["TypeScript", "Vue.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
     "links": {
       "Demo": "https://luthen.vercel.app",
-      "Code": "https://github.com/eparuchopalma/luthen-ui"
+      "Código (UI)": "https://github.com/eparuchopalma/luthen-ui",
+      "Código (API)": "https://github.com/eparuchopalma/luthen-api"
     },
     "mainColor": "#242225",
     "secondaryColor": "#BC5536",
@@ -39,13 +40,14 @@
   },
   {
     "title": "Pensive",
-    "description": "Guarda conceptos, frases o notas de estudio, agrega palabras clave y referencias para relacionarlas.",
+    "description": "Guarda conceptos, notas de estudio o frases, agrega palabras clave y referencias para relacionarlas.",
     "desktopCover": "assets/pensive_desktop.png",
     "mobileCover": "assets/pensive_mobile.png",
     "stack": ["TypeScript", "Vue.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
     "links": {
       "Demo": "https://pensive-epp.vercel.app/",
-      "Code": "https://github.com/eparuchopalma/pensive-ui/"
+      "Código (UI)": "https://github.com/eparuchopalma/pensive-ui/",
+      "Código (API)": "https://github.com/eparuchopalma/pensive-api/"
     },
     "mainColor": "#0f0f0f",
     "secondaryColor": "#081919",

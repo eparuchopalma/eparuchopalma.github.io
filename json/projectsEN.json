@@ -7,7 +7,8 @@
     "stack": ["TypeScript", "Vue.js", "Node.js", "Express.js", "PostgreSQL", "Sequelize"],
     "links": {
       "Demo": "https://luthen.vercel.app",
-      "Code": "https://github.com/eparuchopalma/luthen-ui"
+      "Code (UI)": "https://github.com/eparuchopalma/luthen-ui",
+      "Code (API)": "https://github.com/eparuchopalma/luthen-api"
     },
     "mainColor": "#242225",
     "secondaryColor": "#BC5536",

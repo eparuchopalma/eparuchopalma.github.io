@@ -1,6 +1,6 @@
 let projects;
 
-const projectsSection = document.getElementById('projects-section');
+const projectsSection = document.getElementById('projects');
 const titleContainer = document.getElementById('title-container');
 const imageContainer = document.getElementById('project-images-list');
 const description = document.getElementById('project-description');

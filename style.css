@@ -389,7 +389,7 @@ a {
   height: 48px;
   border: 2px solid #111;
   margin: 12px 0;
-  padding-left: 48px;
+  padding-left: 44px;
   display: flex;
   align-items: center;
   font-size: 1.6rem;
@@ -398,7 +398,7 @@ a {
   gap: 16px;
   text-decoration: none;
   background-repeat: no-repeat;
-  background-position: 8px;
+  background-position: 6px;
   background-size: 36px;
   position: relative;
 }
@@ -408,7 +408,7 @@ a {
   width: 24px;
   height: 24px;
   position: absolute;
-  right: 12px;
+  right: 6px;
   top: calc(50% - 12px);
   background-image: url('https://img.icons8.com/?size=100&id=60664&format=png&color=111111');
   background-repeat: no-repeat;
