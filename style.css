@@ -385,12 +385,14 @@ a {
 }
 
 .section__link {
-  width: 300px;
+  width: 350px;
   height: 48px;
+  border: 2px solid #111;
+  margin: 12px 0;
   padding-left: 48px;
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: #111;
   gap: 16px;
@@ -398,35 +400,45 @@ a {
   background-repeat: no-repeat;
   background-position: 8px;
   background-size: 36px;
+  position: relative;
+}
+
+.section__link::after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 12px;
+  top: calc(50% - 12px);
+  background-image: url('https://img.icons8.com/?size=100&id=60664&format=png&color=111111');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform .3s;
 }
 
 .section__link:hover {
   text-decoration: underline;
+  background-color: #DDD;
 }
 
-.email {
-  margin-bottom: 12px;
-  padding-left: 48px;
-  text-align: left;
-  font-weight: 500;
-  background-repeat: no-repeat;
-  background-position: 8px;
-  background-size: 36px;
+.section__link:hover::after {
+  transform: scale(1.2);
+}
+
+.section__link_email {
   background-image: url('https://img.icons8.com/?size=100&id=Zp93Jltra4ez&format=png&color=111111');
 }
 
 .section__link_linkedin {
-  animation-delay: 4s;
   background-image: url('https://img.icons8.com/?size=100&id=98960&format=png&color=111111');
 }
 
 .section__link_github {
-  animation-delay: 5s;
   background-image: url('https://img.icons8.com/?size=100&id=62856&format=png&color=111111');
 }
 
 .section__link_goodreads {
-  animation-delay: 6s;
   background-image: url('https://img.icons8.com/?size=100&id=106449&format=png&color=111111');
 }
 
