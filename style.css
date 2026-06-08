@@ -1,4 +1,7 @@
 :root {
+  --projects-bg: #111;
+  --projects-accent: #111;
+  --projects-color: #fff;
   font-size: 62.5%;
   color: #111;
 }
@@ -54,6 +57,9 @@ body, button, a {
   display: grid;
   text-align: center;
   scroll-snap-align: start;
+  animation-name: fade;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
 }
 
 .lang-link {
@@ -219,6 +225,8 @@ body, button, a {
 }
 
 .section_dynamic-bg {
+  background-color: var(--projects-bg);
+  color: var(--projects-color);
   transition: background-color 1s;
 }
 
@@ -245,7 +253,7 @@ body, button, a {
 }
 
 .project-title_selected {
-  background-color: #111;
+  background-color: var(--projects-accent);
   color: #fff;
   font-size: 2.4rem;
   opacity: 1;
@@ -346,13 +354,9 @@ body, button, a {
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
-  background-color: #111;
+  background-color: var(--projects-accent);
   color: white;
   z-index: 10;
-}
-
-.section__picture {
-  width: 50%;
 }
 
 .section__links {
@@ -551,7 +555,7 @@ body, button, a {
 
   .project-title_selected:hover {
     color: #fff;
-    background-color: #111;
+    background-color: var(--projects-accent);
     opacity: 1;
     cursor: default;
   }
@@ -591,5 +595,15 @@ body, button, a {
 
   100% {
     transform: none;
+  }
+}
+
+
+@keyframes fade {
+  from {
+    filter: blur(10px);
+  }
+  to {
+    filter: blur(1px);
   }
 }

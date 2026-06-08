@@ -149,12 +149,11 @@ function focusTitle(index) {
 function setProjectColors(i) {
   const projectMainColor = projects[i].mainColor;
   const projectThemeIsDark = projects[i].isDark;
-  const projectTitle = titleContainer.children[i];
   const projectSecondaryColor = projects[i].secondaryColor;
-  let style = `background-color: ${projectMainColor};`;
-  if (projectThemeIsDark) style += 'color: white;';
-  projectsSection.setAttribute('style', style);
-  projectTitle.setAttribute('style', `background-color: ${projectSecondaryColor}`);
+  const body = document.querySelector('body');
+  body.style.setProperty('--projects-color', projectThemeIsDark ? '#fff' : '#111');
+  body.style.setProperty('--projects-bg', projectMainColor);
+  body.style.setProperty('--projects-accent', projectSecondaryColor);
 }
 
 setProjects();
