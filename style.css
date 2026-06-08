@@ -171,10 +171,6 @@ body, button, a {
   box-shadow: -6px 6px #111;
 }
 
-.cta:hover, .cta:focus {
-  box-shadow: -12px 12px #2576E0;
-}
-
 .picture-container {
   width: 89%;
   max-height: 40vh;
@@ -248,26 +244,12 @@ body, button, a {
   opacity: .5;
 }
 
-.project-title:hover {
-  opacity: 1;
-  cursor: pointer;
-  color: #111;
-  background-color: #e7e7e7;
-}
-
 .project-title_selected {
   background-color: #111;
   color: #fff;
   font-size: 2.4rem;
   opacity: 1;
   position: relative;
-}
-
-.project-title_selected:hover {
-  color: #fff;
-  background-color: #111;
-  opacity: 1;
-  cursor: default;
 }
 
 .project-title_selected::before {
@@ -297,17 +279,8 @@ body, button, a {
   filter: grayscale(1);
 }
 
-.project-images:hover {
-  filter: none;
-  cursor: pointer;
-}
-
 .project-images_selected {
   filter: none;
-  cursor: auto;
-}
-
-.project-images_selected:hover {
   cursor: auto;
 }
 
@@ -419,15 +392,6 @@ body, button, a {
   transition: transform .3s;
 }
 
-.section__link:hover {
-  text-decoration: underline;
-  background-color: #DDD;
-}
-
-.section__link:hover::after {
-  transform: scale(1.2);
-}
-
 .section__link_email {
   background-image: url('https://img.icons8.com/?size=100&id=Zp93Jltra4ez&format=png&color=111111');
 }
@@ -464,10 +428,6 @@ body, button, a {
   text-decoration: underline;
   font-size: 1.6rem;
   font-weight: 500;
-}
-
-.link:hover {
-  color: #ddd;
 }
 
 @media (min-width: 576px) {
@@ -573,8 +533,56 @@ body, button, a {
   }
 }
 
+@media (any-hover: hover) {
+  .cta:hover, .cta:focus {
+    box-shadow: 12px 12px #2576E0;
+  }
+
+  .cta_secondary:hover, .cta_secondary:focus {
+    box-shadow: -12px 12px #2576E0;
+  }
+
+  .project-title:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: #111;
+    background-color: #e7e7e7;
+  }
+
+  .project-title_selected:hover {
+    color: #fff;
+    background-color: #111;
+    opacity: 1;
+    cursor: default;
+  }
+
+  .project-images:hover {
+    filter: none;
+    cursor: pointer;
+  }
+
+  .project-images_selected:hover {
+    cursor: auto;
+  }
+
+  .section__link:hover {
+    text-decoration: underline;
+    background-color: #DDD;
+  }
+
+  .section__link:hover::after {
+    transform: scale(1.2);
+  }
+
+  .link:hover {
+    color: #ddd;
+  }
+
+}
+
 @keyframes slide {
   0% {
+    transform: none;
   }
 
   50% {
@@ -585,4 +593,3 @@ body, button, a {
     transform: none;
   }
 }
-
