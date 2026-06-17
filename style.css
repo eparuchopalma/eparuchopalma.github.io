@@ -73,10 +73,6 @@ body, button, a {
   text-align: center;
   justify-self: center;
   position: relative;
-  background-color: #fff;
-  animation-name: reveal;
-  animation-duration: .5s;
-  animation-timing-function: ease-in-out;
 }
 
 .headline__label {
@@ -92,7 +88,6 @@ body, button, a {
 .headline__label_left {
   top: 0;
   margin-bottom: -1.6rem;
-  z-index: -10;
 }
 
 .headline__label_right {
@@ -113,7 +108,7 @@ body, button, a {
   font-size: 2.4rem;
   box-shadow: 6px 6px #111;
   animation-name: shadowToRight;
-  animation-duration: .5s;
+  animation-duration: 1s;
   animation-fill-mode: backwards;
   animation-timing-function: ease-in-out;
 }
@@ -144,6 +139,9 @@ body, button, a {
   font-size: 1.6rem;
   cursor: pointer;
   transition: box-shadow .5s;
+  animation-duration: .5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
 }
 
 .cta_primary {
@@ -151,10 +149,7 @@ body, button, a {
   background-color: #272727;
   box-shadow: 6px 6px #111;
   animation-name: shadowToRight;
-  animation-delay: .4s;
-  animation-duration: .5s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
+  animation-delay: .8s;
 }
 
 .cta_secondary {
@@ -162,10 +157,7 @@ body, button, a {
   box-shadow: -6px 6px #111;
   background-color: #fff;
   animation-name: shadowToLeft;
-  animation-delay: .2s;
-  animation-duration: .5s;
-  animation-fill-mode: backwards;
-  animation-timing-function: ease-in-out;
+  animation-delay: .7s;
 }
 
 .picture-container {
@@ -176,7 +168,7 @@ body, button, a {
   position: relative;
   aspect-ratio: 3 / 4;
   animation-name: rotateClockwise;
-  animation-delay: .5s;
+  animation-delay: 1.2s;
   animation-duration: .5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -191,7 +183,7 @@ body, button, a {
   position: absolute;
   z-index: -10;
   animation-name: rotateCounterClockwise;
-  animation-delay: .5s;
+  animation-delay: 1.2s;
   animation-duration: .5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
@@ -628,11 +620,5 @@ body, button, a {
   }
   to {
     box-shadow: -6px 6px #111;
-  }
-}
-
-@keyframes revealUp {
-  to {
-    transform: translateY(-12px);
   }
 }
