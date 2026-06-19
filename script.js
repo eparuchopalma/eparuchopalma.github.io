@@ -8,6 +8,8 @@ const labelContainer = document.getElementById('label-container');
 const linkContainer = document.getElementById('link-container');
 let indexOnFocus = 0;
 
+document.getElementById('theme-button').addEventListener('click', changeTheme);
+
 async function setProjects() {
   await getProjects();
 
@@ -154,6 +156,22 @@ function setProjectColors(i) {
   body.style.setProperty('--projects-color', projectThemeIsDark ? '#fff' : '#111');
   body.style.setProperty('--projects-bg', projectMainColor);
   body.style.setProperty('--projects-accent', projectSecondaryColor);
+}
+
+function changeTheme() {
+  const body = document.getElementById('body');
+  const themeButton = document.getElementById('theme-button');
+  const themeIsDark = body.style.getPropertyValue('--bg-color') === '#191919';
+
+  if (themeIsDark) {
+    body.style.setProperty('--bg-color', '#fff');
+    body.style.setProperty('--font-color', '#191919');
+    themeButton.setAttribute('class', 'theme-button');
+  } else {
+    body.style.setProperty('--bg-color', '#191919');
+    body.style.setProperty('--font-color', '#fff');
+    themeButton.setAttribute('class', 'theme-button theme-button_dark')
+  }
 }
 
 setProjects();
