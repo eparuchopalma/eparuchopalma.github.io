@@ -3,8 +3,8 @@
   --projects-bg: black;
   --projects-color: #fff;
   --projects-accent: black;
-  --font-color: black;
-  --bg-color: #fff;
+  --font-color: #fff;
+  --bg-color: #191919;
 }
 
 * {
@@ -295,6 +295,7 @@ body, button, a {
 
 .project-images-list {
   max-height: 40vh;
+  margin: 0 auto;
   position: relative;
   aspect-ratio: 16 / 9;
 }
@@ -499,22 +500,6 @@ body, button, a {
     aspect-ratio: 9 / 16;
   }
 
-  .section {
-    grid-template-columns: 1fr 2fr;
-  }
-
-  .section__title {
-    grid-column: span 2;
-  }
-
-  .section__first-pt {
-    align-self: stretch;
-  }
-
-  .section__second-pt {
-    padding-left: 24px;
-  }
-
 }
 
 @media (min-width: 768px) {
@@ -532,8 +517,25 @@ body, button, a {
     margin: 0 auto;
   }
 
+  .section {
+    grid-template-columns: 1fr 2fr;
+  }
+
   .section__title {
+    grid-column: span 2;
     font-size: 7rem;
+  }
+
+  .section__first-pt {
+    align-self: stretch;
+  }
+
+  .section__first-pt_lg {
+    grid-template-columns: 1fr 6fr;
+  }
+
+  .section__second-pt {
+    padding-left: 24px;
   }
 
   .label {

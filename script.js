@@ -1,6 +1,5 @@
 let projects;
 
-const projectsSection = document.getElementById('projects');
 const titleContainer = document.getElementById('title-container');
 const imageContainer = document.getElementById('project-images-list');
 const description = document.getElementById('project-description');
@@ -10,14 +9,16 @@ let indexOnFocus = 0;
 
 document.getElementById('theme-button').addEventListener('click', changeTheme);
 
+for (const title of titleContainer.children) {
+  title.addEventListener('click', () => selectProject(Number(title.dataset.projectIndex)));
+}
+
+for (const item of imageContainer.children) {
+  item.addEventListener('click', () => selectProject(Number(item.dataset.projectIndex)));
+}
+
 async function setProjects() {
   await getProjects();
-
-  for (let index in projects) {
-    setProjectTitle(index);
-    setProjectImages(index);
-  }
-
   styleProjectOnFocus(0);
   setProjectText(0);
   setProjectColors(0);
@@ -67,35 +68,6 @@ function setLinks(index) {
   }
 }
 
-function setProjectTitle(index) {
-  const titleElement = document.createElement('li');
-  const titleText = document.createTextNode(projects[index].title);
-  titleElement.appendChild(titleText);
-  titleElement.setAttribute('class', 'project-title');
-  titleElement.addEventListener('click', () => selectProject(index));
-  titleContainer.appendChild(titleElement);
-}
-
-function setProjectImages(index) {
-  const projectImages = document.createElement('li');
-  projectImages.setAttribute('class', 'project-images');
-  projectImages.addEventListener('click', () => selectProject(index));
-
-  const mobileImg = document.createElement('img');
-  mobileImg.setAttribute('class', 'project-mobile-img');
-  mobileImg.setAttribute('src', projects[index].mobileCover);
-
-  const desktopImg = document.createElement('img');
-  desktopImg.setAttribute('class', 'project-desktop-img');
-  desktopImg.setAttribute('src', projects[index].desktopCover);
-
-  projectImages.appendChild(desktopImg);
-  projectImages.appendChild(mobileImg);
-  imageContainer.appendChild(projectImages);
-
-  projectImages.setAttribute('style', `transform: rotate(${index * 5}deg) translateX(${index * 25}px); z-index: ${projects.length - index};`);
-}
-
 function styleProjectOnFocus(index) {
   titleContainer
     .children[index].setAttribute('class', 'project-title project-title_selected');
@@ -105,35 +77,34 @@ function styleProjectOnFocus(index) {
 
 async function selectProject(i) {
   if (i == indexOnFocus) return;
-  indexOnFocus = i;
-  const selectedIndex = Number(i);
-
-  focusTitle(selectedIndex);
-  styleProjectOnFocus(selectedIndex);
-  setProjectText(selectedIndex);
-  setProjectColors(selectedIndex);
+  indexOnFocus = Number(i);
+  
+  focusTitle(indexOnFocus);
+  styleProjectOnFocus(indexOnFocus);
+  setProjectText(indexOnFocus);
+  setProjectColors(indexOnFocus);
 
   await new Promise((resolve, reject) => {
     setTimeout(() => {
-      imageContainer.children[selectedIndex]
+      imageContainer.children[indexOnFocus]
         .setAttribute('style', `z-index: ${imageContainer.children.length};`);
       resolve();
     }, 500)
   });
 
-  for (let index = 0; index < imageContainer.children.length; index++) {
-    if (index === selectedIndex) continue;
+  for (const item of imageContainer.children) {
+    const index = Number(item.dataset.projectIndex);
+    if (index === indexOnFocus) continue;
 
-    const element = imageContainer.children[index];
-    const stackPosition = (index < selectedIndex) ? projects.length - (selectedIndex - index) : projects.length - (index - selectedIndex);
-    const rotationAngle = (index - selectedIndex) * 5;
-    const translationX = (index - selectedIndex) * 25;
-    const timeOut = (index < selectedIndex) ? 400 : 100;
+    const stackPosition = (index < indexOnFocus) ? projects.length - (indexOnFocus - index) : projects.length - (index - indexOnFocus);
+    const rotationAngle = (index - indexOnFocus) * 5;
+    const translationX = (index - indexOnFocus) * 25;
+    const timeOut = (index < indexOnFocus) ? 400 : 100;
 
-    element.setAttribute('class', 'project-images');
+    item.setAttribute('class', 'project-images');
 
     new Promise((resolve, reject) => setTimeout(() => {
-      element.setAttribute('style', `z-index: ${stackPosition}; transform: rotate(${rotationAngle}deg) translate(${translationX}px);`);
+      item.setAttribute('style', `z-index: ${stackPosition}; transform: rotate(${rotationAngle}deg) translate(${translationX}px);`);
       resolve();
     }, timeOut));
   }
@@ -161,16 +132,16 @@ function setProjectColors(i) {
 function changeTheme() {
   const body = document.getElementById('body');
   const themeButton = document.getElementById('theme-button');
-  const themeIsDark = body.style.getPropertyValue('--bg-color') === '#191919';
+  const themeIsLight = body.style.getPropertyValue('--bg-color') === '#fff';
 
-  if (themeIsDark) {
-    body.style.setProperty('--bg-color', '#fff');
-    body.style.setProperty('--font-color', '#191919');
-    themeButton.setAttribute('class', 'theme-button');
-  } else {
+  if (themeIsLight) {
     body.style.setProperty('--bg-color', '#191919');
     body.style.setProperty('--font-color', '#fff');
     themeButton.setAttribute('class', 'theme-button theme-button_dark')
+  } else {
+    body.style.setProperty('--bg-color', '#fff');
+    body.style.setProperty('--font-color', '#191919');
+    themeButton.setAttribute('class', 'theme-button');
   }
 }
 

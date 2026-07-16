@@ -18,7 +18,7 @@
 <body id="body" class="body">
   <main class="scroll-container">
 
-    <button id="theme-button" class="theme-button"></button>
+    <button id="theme-button" class="theme-button theme-button_dark"></button>
 
     <header class="header">
       <h1 class="headline">
@@ -47,14 +47,47 @@
 
     <section id="projects" class="section section_dynamic-bg">
       <h2 class="section__title">Proyectos</h2>
-      <div class="section__first-pt">
-        <ul id="title-container" class="project-title-container"></ul>
+      <div class="section__first-pt section__first-pt_lg">
+        <ul id="title-container" class="project-title-container">
+          <li class="project-title project-title_selected" data-project-index="0">Luthen</li>
+          <li class="project-title" data-project-index="1">Mantra</li>
+          <li class="project-title" data-project-index="2">Lighthouse</li>
+          <li class="project-title" data-project-index="3">Pensive</li>
+        </ul>
       </div>
       <div class="section__second-pt">
-        <ul id="project-images-list" class="project-images-list"></ul>
-        <ul id="label-container" class="label-container label-container_mt"></ul>
-        <p id="project-description" class="project-description"></p>
-        <ul id="link-container" class="link-container"></ul>
+        <ul id="project-images-list" class="project-images-list">
+          <li class="project-images project-images_selected project-images_slide" data-project-index="0" style="transform: rotate(0deg) translateX(0px); z-index: 4;">
+            <img class="project-desktop-img" src="assets/luthen_desktop.png" alt="Vista de escritorio de Luthen">
+            <img class="project-mobile-img" src="assets/luthen_mobile.png" alt="Vista móvil de Luthen">
+          </li>
+          <li class="project-images" data-project-index="1" style="transform: rotate(-5deg) translateX(-25px); z-index: 3;">
+            <img class="project-desktop-img" src="assets/mantra_desktop.png" alt="Vista de escritorio de Mantra">
+            <img class="project-mobile-img" src="assets/mantra_mobile.png" alt="Vista móvil de Mantra">
+          </li>
+          <li class="project-images" data-project-index="2" style="transform: rotate(-10deg) translateX(-50px); z-index: 2;">
+            <img class="project-desktop-img" src="assets/lighthouse_desktop.png" alt="Vista de escritorio de Lighthouse">
+            <img class="project-mobile-img" src="assets/lighthouse_mobile.png" alt="Vista móvil de Lighthouse">
+          </li>
+          <li class="project-images" data-project-index="3" style="transform: rotate(-15deg) translateX(-75px); z-index: 1;">
+            <img class="project-desktop-img" src="assets/pensive_desktop.png" alt="Vista de escritorio de Pensive">
+            <img class="project-mobile-img" src="assets/pensive_mobile.png" alt="Vista móvil de Pensive">
+          </li>
+        </ul>
+        <ul id="label-container" class="label-container label-container_mt">
+          <li class="label">TypeScript</li>
+          <li class="label">Vue.js</li>
+          <li class="label">Node.js</li>
+          <li class="label">Express.js</li>
+          <li class="label">PostgreSQL</li>
+          <li class="label">Sequelize</li>
+        </ul>
+        <p id="project-description" class="project-description">Registro financiero. Guarda movimientos, maneja diferentes fondos, analiza tus estadísticas.</p>
+        <ul id="link-container" class="link-container">
+          <a class="link" target="_blank" href="https://luthen.vercel.app">Demo</a>
+          <a class="link" target="_blank" href="https://github.com/eparuchopalma/luthen-ui">Código (UI)</a>
+          <a class="link" target="_blank" href="https://github.com/eparuchopalma/luthen-api">Código (API)</a>
+        </ul>
       </div>
     </section>
 
