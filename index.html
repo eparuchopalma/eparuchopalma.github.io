@@ -16,7 +16,7 @@
   <title>Edgar Parucho Palma</title>
 </head>
 <body id="body" class="body">
-  <main class="scroll-container">
+  <main class="main">
 
     <button id="theme-button" class="theme-button theme-button_dark"></button>
 
@@ -46,46 +46,109 @@
     </header>
 
     <section id="projects" class="section">
-      <h2 class="section__title">Proyectos</h2>
-      <div class="section__container">
-        <h3 class="project-title">Mantra</h3>
-        <div>
-          <p id="project-description" class="project-description">Registro financiero. Guarda movimientos, maneja diferentes fondos, analiza tus estadísticas.</p>
-          <p>Construido con:</p>
-          <ul>
-            <li>Vue.js</li>
-            <li>Vuetify</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
-        <!-- <ul class="link-container">
-          <li>
-            <a href="#" class="link link_github" target="_blank">Repositorio Front-End</a>
-          </li>
-          <li>
-            <a href="#" class="link link_github" target="_blank">Repositorio Back-End</a>
-          </li>
-          <li>
-            <a href="#" class="link link_vercel" target="_blank">Demo</a>
-          </li>
-        </ul> -->
+      <div>
+        <h2 class="section__title">Mantra</h2>
+        <p>Software de Help Desk para Microfilms Center</p>
       </div>
-      <div class="section__container">
+      <div class="section__container section__container_lg">
         <ul class="image-list">
           <li class="image-list__item">
             <img
             class="project-image project-image_desktop"
             src="assets/mantra_desktop.png"
             alt="Vista de escritorio de Mantra">
-            <div class="laptop-mockup"></div>
             <img
             class="project-image project-image_mobile"
             src="assets/mantra_mobile.png"
             alt="Vista de escritorio de Mantra">
           </li>
         </ul>
+      </div>
+      <div class="section__container section__container_sm">
+        <div class="tabs-container">
+          <input type="radio" id="tab1" name="tab-group" checked>
+          <label for="tab1" class="tab-label tab-label_mantra">Resumen</label>
+          <div class="tab-content">
+            <h3 class="tab-title">Resumen</h3>
+            <ul>
+              <li class="tab-text">Arquitectura Full-Stack: Diseñada y construida desde cero con una interfaz y funcionalidades orientadas al objetivo.</li>
+              <li class="tab-text">Aplicación Web Progresiva &lpar;PWA&rpar;: Permite el acceso rápido, instalación y una experiencia fluida.</li>
+              <li class="tab-text">Transformación Digital: Reemplazó flujos de trabajo obsoletos, centralizando la operación de múltiples departamentos.</li>
+              <li class="tab-text">Impacto Financiero y Comercial: Redujo drásticamente costos de la organización y demostró una estabilidad que permitió su comercialización.</li>
+              <li class="tab-text">Seguridad y Centralización Operativa: Consolidó la consistencia de datos y proporcionó acceso remoto para los equipos de trabajo.</li>
+            </ul>
+          </div>
+          <input type="radio" id="tab2" name="tab-group">
+          <label for="tab2" class="tab-label tab-label_mantra">Stack</label>
+          <div class="tab-content">
+            <h3 class="tab-title">Stack</h3>
+            <div class="expansion-panels">
+              <details class="expansion-panel">
+                <summary>
+                  <span>Vue.js &lpar;v2&rpar;</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>Options API</li>
+                    <li>Vue-CLI</li>
+                    <li>Vuex</li>
+                    <li>Vue-router</li>
+                    <li>PWA</li>
+                    <li>Vuetify</li>
+                  </ul>
+                </div>
+              </details>
+
+              <details class="expansion-panel">
+                <summary>
+                  <span>Node.js</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci totam dicta fugiat, temporibus harum in obcaecati quaerat deserunt veniam, unde fugit vero consequatur labore neque dolorum voluptate molestias quia?
+                </div>
+              </details>
+
+              <details class="expansion-panel">
+                <summary>
+                  <span>Express.js</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci totam dicta fugiat, temporibus harum in obcaecati quaerat deserunt veniam, unde fugit vero consequatur labore neque dolorum voluptate molestias quia?
+                </div>
+              </details>
+
+              <details class="expansion-panel">
+                <summary>
+                  <span>MongoDB</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci totam dicta fugiat, temporibus harum in obcaecati quaerat deserunt veniam, unde fugit vero consequatur labore neque dolorum voluptate molestias quia?
+                </div>
+              </details>
+            </div>
+          </div>
+
+          <input type="radio" id="tab3" name="tab-group">
+          <label for="tab3" class="tab-label tab-label_mantra">Enlaces</label>
+          <div class="tab-content">
+            <h3 class="tab-title">Enlaces</h3>
+            <ul>
+              <li class="tab-text">
+                <a href="#" class="link link_github" target="_blank">Repositorio Front-End</a>
+              </li>
+              <li class="tab-text">
+                <a href="#" class="link link_github" target="_blank">Repositorio Back-End</a>
+              </li>
+              <li class="tab-text">
+                <a href="#" class="link link_vercel" target="_blank">Demo</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
