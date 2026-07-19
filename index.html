@@ -70,20 +70,64 @@
           <label for="tab1" class="tab-label tab-label_mantra">Resumen</label>
           <div class="tab-content">
             <h3 class="tab-title">Resumen</h3>
-            <ul>
-              <li class="tab-text">Arquitectura Full-Stack: Diseñada y construida desde cero con una interfaz y funcionalidades orientadas al objetivo.</li>
-              <li class="tab-text">Aplicación Web Progresiva &lpar;PWA&rpar;: Permite el acceso rápido, instalación y una experiencia fluida.</li>
-              <li class="tab-text">Transformación Digital: Reemplazó flujos de trabajo obsoletos, centralizando la operación de múltiples departamentos.</li>
-              <li class="tab-text">Impacto Financiero y Comercial: Redujo drásticamente costos de la organización y demostró una estabilidad que permitió su comercialización.</li>
-              <li class="tab-text">Seguridad y Centralización Operativa: Consolidó la consistencia de datos y proporcionó acceso remoto para los equipos de trabajo.</li>
-            </ul>
+            <div class="expansion-panels">
+              <details class="expansion-panel" name="features">
+                <summary>
+                  <span>Arquitectura Full-Stack</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Diseñada y construida desde cero con una interfaz y funcionalidades orientadas al objetivo.
+                </div>
+              </details>
+
+              <details class="expansion-panel" name="features">
+                <summary>
+                  <span>Aplicación Web Progresiva &lpar;PWA&rpar;</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Permite el acceso rápido, instalación y una experiencia fluida.
+                </div>
+              </details>
+
+              <details class="expansion-panel" name="features">
+                <summary>
+                  <span>Transformación Digital</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Reemplazó flujos de trabajo obsoletos, centralizando la operación de múltiples departamentos.
+                </div>
+              </details>
+
+              <details class="expansion-panel" name="features" open>
+                <summary>
+                  <span>Impacto Financiero y Comercial</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Redujo drásticamente costos de la organización y demostró una estabilidad que permitió su comercialización.
+                </div>
+              </details>
+
+              <details class="expansion-panel" name="features">
+                <summary>
+                  <span>Seguridad y Centralización Operativa</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  Consolidó la consistencia de datos y proporcionó acceso remoto para los equipos de trabajo.
+                </div>
+              </details>
+            </div>
           </div>
           <input type="radio" id="tab2" name="tab-group">
           <label for="tab2" class="tab-label tab-label_mantra">Stack</label>
           <div class="tab-content">
             <h3 class="tab-title">Stack</h3>
             <div class="expansion-panels">
-              <details class="expansion-panel">
+              <details class="expansion-panel" name="tech">
                 <summary>
                   <span>Vue.js &lpar;v2&rpar;</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -100,34 +144,36 @@
                 </div>
               </details>
 
-              <details class="expansion-panel">
+              <details class="expansion-panel" name="tech">
                 <summary>
                   <span>Node.js</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci totam dicta fugiat, temporibus harum in obcaecati quaerat deserunt veniam, unde fugit vero consequatur labore neque dolorum voluptate molestias quia?
+                  <ul>
+                    <li>REST API</li>
+                    <li>Express.js</li>
+                    <li>Routing</li>
+                    <li>Middleware</li>
+                    <li>Data modeling</li>
+                    <li>JWT</li>
+                    <li>Mongoose</li>
+                  </ul>
                 </div>
               </details>
 
-              <details class="expansion-panel">
+              <details class="expansion-panel" name="tech">
                 <summary>
                   <span>Express.js</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci totam dicta fugiat, temporibus harum in obcaecati quaerat deserunt veniam, unde fugit vero consequatur labore neque dolorum voluptate molestias quia?
-                </div>
               </details>
 
-              <details class="expansion-panel">
+              <details class="expansion-panel" name="tech">
                 <summary>
                   <span>MongoDB</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem adipisci totam dicta fugiat, temporibus harum in obcaecati quaerat deserunt veniam, unde fugit vero consequatur labore neque dolorum voluptate molestias quia?
-                </div>
               </details>
             </div>
           </div>

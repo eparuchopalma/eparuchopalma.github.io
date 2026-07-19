@@ -544,6 +544,11 @@ body, button, a {
     transform: scale(1.2);
   }
 
+  .expansion-panel summary:hover {
+    font-weight: 500;
+    opacity: 1;
+  }
+
 }
 
 @keyframes fade {
@@ -608,18 +613,18 @@ body, button, a {
 .expansion-panels {
   width: 100%;
   max-width: 600px;
-  border: 1px solid #888;
   border-radius: 2px;
-  overflow: hidden;
   font-size: 1.6rem;
+  overflow: hidden;
 }
 
-.expansion-panel {
-  border-bottom: 1px solid #888;
+.expansion-panel[open] {
+  font-weight: 500;
+  opacity: 1;
 }
 
-.expansion-panel:last-child {
-  border-bottom: none;
+.expansion-panel:not([open]) {
+  opacity: .8;
 }
 
 .expansion-panel summary {
@@ -630,10 +635,6 @@ body, button, a {
   cursor: pointer;
   transition: opacity 0.2s;
   user-select: none;
-}
-
-.expansion-panel summary:hover {
-  opacity: .7;
 }
 
 .expansion-panel .icon {
@@ -652,5 +653,4 @@ body, button, a {
 .content {
   padding: 12px;
   font-size: .8em;
-  border-top: 1px solid #f3f4f6;
 }
