@@ -51,18 +51,47 @@
         <p>Software de Help Desk para Microfilms Center</p>
       </div>
       <div class="section__container section__container_lg">
-        <ul class="image-list">
-          <li class="image-list__item">
-            <img
-            class="project-image project-image_desktop"
-            src="assets/mantra_desktop.png"
-            alt="Vista de escritorio de Mantra">
-            <img
-            class="project-image project-image_mobile"
-            src="assets/mantra_mobile.png"
-            alt="Vista de escritorio de Mantra">
-          </li>
-        </ul>
+        <div class="carousel">
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <button class="carousel-btn btn-prev" aria-label="Anterior">&#10094;</button>
+          <button class="carousel-btn btn-next" aria-label="Siguiente">&#10095;</button>
+          <div class="carousel__track">
+            <div class="carousel__item">
+              <img
+              class="project-image project-image_desktop"
+              src="assets/mantra_desktop_1.webp"
+              alt="Vista de escritorio de Mantra">
+              <img
+              class="project-image project-image_mobile"
+              src="assets/mantra_mobile_1.webp"
+              alt="Vista de escritorio de Mantra">
+            </div>
+            <div class="carousel__item">
+              <img
+              class="project-image project-image_desktop"
+              src="assets/mantra_desktop_2.webp"
+              alt="Vista de escritorio de Mantra">
+              <img
+              class="project-image project-image_mobile"
+              src="assets/mantra_mobile_2.webp"
+              alt="Vista de escritorio de Mantra">
+            </div>
+            <div class="carousel__item">
+              <img
+              class="project-image project-image_desktop"
+              src="assets/mantra_desktop_3.webp"
+              alt="Vista de escritorio de Mantra">
+              <img
+              class="project-image project-image_mobile"
+              src="assets/mantra_mobile_3.webp"
+              alt="Vista de escritorio de Mantra">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="section__container section__container_sm">
         <div class="tabs-container">
@@ -127,7 +156,7 @@
           <div class="tab-content">
             <h3 class="tab-title">Stack</h3>
             <div class="expansion-panels">
-              <details class="expansion-panel" name="tech">
+              <details class="expansion-panel" name="tech" open>
                 <summary>
                   <span>Vue.js &lpar;v2&rpar;</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
