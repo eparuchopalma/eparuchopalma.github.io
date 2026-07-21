@@ -46,9 +46,9 @@
     </header>
 
     <section id="projects" class="section">
-      <div>
+      <div class="title-container">
         <h2 class="section__title">Mantra</h2>
-        <p>Software de Help Desk para Microfilms Center</p>
+        <p class="section__subtitle">App de Help Desk<br>Microfilms Center</p>
       </div>
       <div class="section__container section__container_lg">
         <div class="carousel">
@@ -62,33 +62,39 @@
           <div class="carousel__track">
             <div class="carousel__item">
               <img
-              class="project-image project-image_desktop"
-              src="assets/mantra_desktop_1.webp"
-              alt="Vista de escritorio de Mantra">
-              <img
               class="project-image project-image_mobile"
               src="assets/mantra_mobile_1.webp"
               alt="Vista de escritorio de Mantra">
+              <picture class="project-image project-image_desktop">
+                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_1.webp">
+                <img
+                src="assets/mantra_mobile_4.webp"
+                alt="Vista de escritorio de Mantra">
+              </picture>
             </div>
             <div class="carousel__item">
-              <img
-              class="project-image project-image_desktop"
-              src="assets/mantra_desktop_2.webp"
-              alt="Vista de escritorio de Mantra">
               <img
               class="project-image project-image_mobile"
               src="assets/mantra_mobile_2.webp"
               alt="Vista de escritorio de Mantra">
+              <picture class="project-image project-image_desktop">
+                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_2.webp">
+                <img
+                src="assets/mantra_mobile_5.webp"
+                alt="Vista de escritorio de Mantra">
+              </picture>
             </div>
             <div class="carousel__item">
-              <img
-              class="project-image project-image_desktop"
-              src="assets/mantra_desktop_3.webp"
-              alt="Vista de escritorio de Mantra">
               <img
               class="project-image project-image_mobile"
               src="assets/mantra_mobile_3.webp"
               alt="Vista de escritorio de Mantra">
+              <picture class="project-image project-image_desktop">
+                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_1.webp">
+                <img
+                src="assets/mantra_mobile_6.webp"
+                alt="Vista de escritorio de Mantra">
+              </picture>
             </div>
           </div>
         </div>
@@ -98,7 +104,6 @@
           <input type="radio" id="tab1" name="tab-group" checked>
           <label for="tab1" class="tab-label tab-label_mantra">Resumen</label>
           <div class="tab-content">
-            <h3 class="tab-title">Resumen</h3>
             <div class="expansion-panels">
               <details class="expansion-panel" name="features">
                 <summary>
@@ -154,71 +159,58 @@
           <input type="radio" id="tab2" name="tab-group">
           <label for="tab2" class="tab-label tab-label_mantra">Stack</label>
           <div class="tab-content">
-            <h3 class="tab-title">Stack</h3>
             <div class="expansion-panels">
               <details class="expansion-panel" name="tech" open>
                 <summary>
-                  <span>Vue.js &lpar;v2&rpar;</span>
+                  <span>Front-End</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <ul>
+                    <li>Vue.js &lpar;v2&rpar;</li>
+                    <li>Vuetify</li>
+                    <li>Vuex</li>
+                    <li>Vue-Router</li>
                     <li>Options API</li>
                     <li>Vue-CLI</li>
-                    <li>Vuex</li>
-                    <li>Vue-router</li>
                     <li>PWA</li>
-                    <li>Vuetify</li>
+                    <li>Chart.js</li>
                   </ul>
                 </div>
               </details>
 
               <details class="expansion-panel" name="tech">
                 <summary>
-                  <span>Node.js</span>
+                  <span>Back-End y Base de Datos</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <ul>
-                    <li>REST API</li>
+                    <li>Node.js</li>
                     <li>Express.js</li>
-                    <li>Routing</li>
-                    <li>Middleware</li>
-                    <li>Data modeling</li>
+                    <li>MongoDB</li>
+                    <li>REST API</li>
                     <li>JWT</li>
                     <li>Mongoose</li>
+                    <li>Base de datos NoSQL</li>
                   </ul>
                 </div>
               </details>
 
-              <details class="expansion-panel" name="tech">
-                <summary>
-                  <span>Express.js</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-              </details>
-
-              <details class="expansion-panel" name="tech">
-                <summary>
-                  <span>MongoDB</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-              </details>
             </div>
           </div>
 
           <input type="radio" id="tab3" name="tab-group">
           <label for="tab3" class="tab-label tab-label_mantra">Enlaces</label>
           <div class="tab-content">
-            <h3 class="tab-title">Enlaces</h3>
             <ul>
-              <li class="tab-text">
+              <li>
                 <a href="#" class="link link_github" target="_blank">Repositorio Front-End</a>
               </li>
-              <li class="tab-text">
+              <li>
                 <a href="#" class="link link_github" target="_blank">Repositorio Back-End</a>
               </li>
-              <li class="tab-text">
+              <li>
                 <a href="#" class="link link_vercel" target="_blank">Demo</a>
               </li>
             </ul>
