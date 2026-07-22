@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,7 @@
       </picture>
     </header>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section" style="--project-primary: #41B883;">
       <div class="title-container">
         <h2 class="section__title">Mantra</h2>
         <p class="section__subtitle">App de Help Desk<br>Microfilms Center</p>
@@ -102,7 +102,7 @@
       <div class="section__container section__container_sm">
         <div class="tabs-container">
           <input type="radio" id="tab1" name="tab-group" checked>
-          <label for="tab1" class="tab-label tab-label_mantra">Resumen</label>
+          <label for="tab1" class="tab-label">Resumen</label>
           <div class="tab-content">
             <div class="expansion-panels">
               <details class="expansion-panel" name="features">
@@ -157,7 +157,7 @@
             </div>
           </div>
           <input type="radio" id="tab2" name="tab-group">
-          <label for="tab2" class="tab-label tab-label_mantra">Stack</label>
+          <label for="tab2" class="tab-label">Stack</label>
           <div class="tab-content">
             <div class="expansion-panels">
               <details class="expansion-panel" name="tech" open>
@@ -200,13 +200,326 @@
           </div>
 
           <input type="radio" id="tab3" name="tab-group">
-          <label for="tab3" class="tab-label tab-label_mantra">Enlaces</label>
+          <label for="tab3" class="tab-label">Enlaces</label>
           <div class="tab-content">
             <p class="alert">Mantra ahora pertenece a Microfilms Center</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="--project-primary: #BC5536;">
+      <div class="title-container">
+        <h2 class="section__title">Luthen</h2>
+        <p class="section__subtitle">Financial log.<br>Save records, funds and stats.</p>
+      </div>
+      <div class="section__container section__container_lg">
+        <div class="carousel">
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+          </div>
+          <button class="carousel-btn btn-prev" aria-label="Anterior">&#10094;</button>
+          <button class="carousel-btn btn-next" aria-label="Siguiente">&#10095;</button>
+          <div class="carousel__track">
+            <div class="carousel__item">
+              <img class="project-image project-image_mobile" src="assets/luthen_mobile.png" alt="Vista móvil de Luthen">
+              <picture class="project-image project-image_desktop">
+                <source media="(min-width: 576px)" srcset="assets/luthen_desktop.png">
+                <img src="assets/luthen_mobile.png" alt="Vista de escritorio de Luthen">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container_sm">
+        <div class="tabs-container">
+          <input type="radio" id="luthen-tab1" name="luthen-tabs" checked>
+          <label for="luthen-tab1" class="tab-label">Resumen</label>
+          <div class="tab-content">
+            <div class="expansion-panels">
+              <details class="expansion-panel" open>
+                <summary>
+                  <span>Arquitectura Full-Stack</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Diseñada y construida desde cero con una interfaz y funcionalidades orientadas al objetivo.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Aplicación Web Progresiva &lpar;PWA&rpar;</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Permite el acceso rápido, instalación y una experiencia fluida.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Transformación Digital</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Reemplazó flujos de trabajo obsoletos, centralizando la operación de múltiples departamentos.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Impacto Financiero y Comercial</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Redujo drásticamente costos de la organización y demostró estabilidad permitiendo su comercialización.</div>
+              </details>
+            </div>
+          </div>
+          <input type="radio" id="luthen-tab2" name="luthen-tabs">
+          <label for="luthen-tab2" class="tab-label">Stack</label>
+          <div class="tab-content">
+            <div class="expansion-panels">
+              <details class="expansion-panel" open>
+                <summary>
+                  <span>Front-End</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>TypeScript</li>
+                    <li>Vue.js</li>
+                    <li>Vue Router</li>
+                    <li>Vuetify</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Back-End y Base de Datos</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Sequelize</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+          <input type="radio" id="luthen-tab3" name="luthen-tabs">
+          <label for="luthen-tab3" class="tab-label">Enlaces</label>
+          <div class="tab-content">
             <ul>
-              <li>
-                <a href="#" class="link link_vercel" target="_blank">Demo</a>
-              </li>
+              <li><a href="https://luthen.vercel.app" class="link link_vercel" target="_blank">Demo</a></li>
+              <li><a href="https://github.com/eparuchopalma/luthen-ui" class="link link_github" target="_blank">Repositorio Front-End</a></li>
+              <li><a href="https://github.com/eparuchopalma/luthen-api" class="link link_github" target="_blank">Repositorio Back-End</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="--project-primary: cyan;">
+      <div class="title-container">
+        <h2 class="section__title">Lighthouse</h2>
+        <p class="section__subtitle">Habit tracker.<br>Add habits and create records.</p>
+      </div>
+      <div class="section__container section__container_lg">
+        <div class="carousel">
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+          </div>
+          <button class="carousel-btn btn-prev" aria-label="Anterior">&#10094;</button>
+          <button class="carousel-btn btn-next" aria-label="Siguiente">&#10095;</button>
+          <div class="carousel__track">
+            <div class="carousel__item">
+              <img class="project-image project-image_mobile" src="assets/lighthouse_mobile.png" alt="Vista móvil de Lighthouse">
+              <picture class="project-image project-image_desktop">
+                <source media="(min-width: 576px)" srcset="assets/lighthouse_desktop.png">
+                <img src="assets/lighthouse_mobile.png" alt="Vista de escritorio de Lighthouse">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container_sm">
+        <div class="tabs-container">
+          <input type="radio" id="lighthouse-tab1" name="lighthouse-tabs" checked>
+          <label for="lighthouse-tab1" class="tab-label">Resumen</label>
+          <div class="tab-content">
+            <div class="expansion-panels">
+              <details class="expansion-panel" open>
+                <summary>
+                  <span>Arquitectura Full-Stack</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Diseñada y construida desde cero con una interfaz y funcionalidades orientadas al objetivo.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Aplicación Web Progresiva &lpar;PWA&rpar;</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Permite el acceso rápido, instalación y una experiencia fluida.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Transformación Digital</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Reemplazó flujos de trabajo obsoletos, centralizando la operación de múltiples departamentos.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Impacto Financiero y Comercial</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Redujo drásticamente costos de la organización y demostró estabilidad permitiendo su comercialización.</div>
+              </details>
+            </div>
+          </div>
+          <input type="radio" id="lighthouse-tab2" name="lighthouse-tabs">
+          <label for="lighthouse-tab2" class="tab-label">Stack</label>
+          <div class="tab-content">
+            <div class="expansion-panels">
+              <details class="expansion-panel" open>
+                <summary>
+                  <span>Front-End</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>TypeScript</li>
+                    <li>React.js</li>
+                    <li>React Router</li>
+                    <li>Material UI</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Back-End y Base de Datos</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Sequelize</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+          <input type="radio" id="lighthouse-tab3" name="lighthouse-tabs">
+          <label for="lighthouse-tab3" class="tab-label">Enlaces</label>
+          <div class="tab-content">
+            <ul>
+              <li><a href="https://lighthouse-drab-eight.vercel.app/" class="link link_vercel" target="_blank">Demo</a></li>
+              <li><a href="https://github.com/eparuchopalma/lighthouse-ui" class="link link_github" target="_blank">Repositorio Front-End</a></li>
+              <li><a href="https://github.com/eparuchopalma/lighthouse-api" class="link link_github" target="_blank">Repositorio Back-End</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="--project-primary: #081919;">
+      <div class="title-container">
+        <h2 class="section__title">Pensive</h2>
+        <p class="section__subtitle">Note taking web app.<br>Save quotes, concepts and references.</p>
+      </div>
+      <div class="section__container section__container_lg">
+        <div class="carousel">
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+          </div>
+          <button class="carousel-btn btn-prev" aria-label="Anterior">&#10094;</button>
+          <button class="carousel-btn btn-next" aria-label="Siguiente">&#10095;</button>
+          <div class="carousel__track">
+            <div class="carousel__item">
+              <img class="project-image project-image_mobile" src="assets/pensive_mobile.png" alt="Vista móvil de Pensive">
+              <picture class="project-image project-image_desktop">
+                <source media="(min-width: 576px)" srcset="assets/pensive_desktop.png">
+                <img src="assets/pensive_mobile.png" alt="Vista de escritorio de Pensive">
+              </picture>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section__container section__container_sm">
+        <div class="tabs-container">
+          <input type="radio" id="pensive-tab1" name="pensive-tabs" checked>
+          <label for="pensive-tab1" class="tab-label">Resumen</label>
+          <div class="tab-content">
+            <div class="expansion-panels">
+              <details class="expansion-panel" open>
+                <summary>
+                  <span>Arquitectura Full-Stack</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Diseñada y construida desde cero con una interfaz y funcionalidades orientadas al objetivo.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Aplicación Web Progresiva &lpar;PWA&rpar;</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Permite el acceso rápido, instalación y una experiencia fluida.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Transformación Digital</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Reemplazó flujos de trabajo obsoletos, centralizando la operación de múltiples departamentos.</div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Impacto Financiero y Comercial</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">Redujo drásticamente costos de la organización y demostró estabilidad permitiendo su comercialización.</div>
+              </details>
+            </div>
+          </div>
+          <input type="radio" id="pensive-tab2" name="pensive-tabs">
+          <label for="pensive-tab2" class="tab-label">Stack</label>
+          <div class="tab-content">
+            <div class="expansion-panels">
+              <details class="expansion-panel" open>
+                <summary>
+                  <span>Front-End</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>TypeScript</li>
+                    <li>Vue.js</li>
+                    <li>Vue Router</li>
+                    <li>Vuetify</li>
+                  </ul>
+                </div>
+              </details>
+              <details class="expansion-panel">
+                <summary>
+                  <span>Back-End y Base de Datos</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <ul>
+                    <li>Node.js</li>
+                    <li>Express.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Sequelize</li>
+                  </ul>
+                </div>
+              </details>
+            </div>
+          </div>
+          <input type="radio" id="pensive-tab3" name="pensive-tabs">
+          <label for="pensive-tab3" class="tab-label">Enlaces</label>
+          <div class="tab-content">
+            <ul>
+              <li><a href="https://pensive-epp.vercel.app/" class="link link_vercel" target="_blank">Demo</a></li>
+              <li><a href="https://github.com/eparuchopalma/pensive-ui/" class="link link_github" target="_blank">Repositorio Front-End</a></li>
+              <li><a href="https://github.com/eparuchopalma/pensive-api" class="link link_github" target="_blank">Repositorio Back-End</a></li>
             </ul>
           </div>
         </div>
