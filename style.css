@@ -245,7 +245,7 @@ body, button, a {
   font-weight: 600;
 }
 
-.section__subtitle { margin-bottom: 10px; }
+.section__subtitle { margin-bottom: 6px; }
 
 .tabs-container {
   height: 100%;
@@ -270,7 +270,7 @@ body, button, a {
 
 .tab-label {
   width: 104px;
-  border: 1px solid #888;
+  border-bottom: 1px solid #888;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   text-align: center;
@@ -296,8 +296,47 @@ body, button, a {
 }
 
 .tabs-container input[type="radio"]:checked + .tab-label {
-  color: contrast-color(var(--project-primary));
-  background-color: var(--project-primary);
+  border-bottom: 2px solid var(--project-primary);
+}
+
+.expansion-panels {
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.expansion-panel[open] {
+  color: var(--font-color);
+}
+
+.expansion-panel summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  cursor: pointer;
+  transition: color 0.2s;
+  user-select: none;
+  font-weight: 500;
+}
+
+.expansion-panel .icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: #9ca3af;
+  stroke-width: 2;
+  transition: transform 0.2s ease, stroke 0.2s ease;
+}
+
+.expansion-panel[open] .icon {
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 0 12px;
+  font-size: .8em;
 }
 
 .link {
@@ -435,6 +474,7 @@ body, button, a {
   flex: 0 0 100%;
   scroll-snap-align: start;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -547,14 +587,9 @@ body, button, a {
 
 @media (max-width: 950px) and (orientation: landscape) {
 
-  .section__title {
-    font-size: 4rem;
-  }
+  .section__title { font-size: 4rem; }
 
-  .section__subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 6px;
-  }
+  .section__subtitle { font-size: 1.4rem; }
 
   .section {
     display: grid;
@@ -636,6 +671,8 @@ body, button, a {
     font-size: 7rem;
   }
 
+  .section__subtitle { margin-bottom: 12px; }
+
   .section__container {
     height: 88vh;
     padding-top: 10%;
@@ -696,13 +733,11 @@ body, button, a {
   .carousel-btn:hover { background: #aaa; }
 
   .tab-label:hover {
-    color: contrast-color(var(--project-primary));
-    background-color: var(--project-primary);
+    opacity: .8;
   }
 
   .expansion-panel summary:hover {
-    font-weight: 500;
-    opacity: 1;
+    color: #888;
   }
 
 }
@@ -738,49 +773,4 @@ body, button, a {
 @keyframes shadowToLeft {
   from { box-shadow: none; }
   to { box-shadow: -6px 6px black; }
-}
-
-.expansion-panels {
-  width: 100%;
-  margin: 0 auto;
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.expansion-panel[open] {
-  font-weight: 500;
-  opacity: 1;
-  color: var(--font-color);
-}
-
-.expansion-panel:not([open]) {
-  color: #888;
-}
-
-.expansion-panel summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  cursor: pointer;
-  transition: opacity 0.2s;
-  user-select: none;
-}
-
-.expansion-panel .icon {
-  width: 20px;
-  height: 20px;
-  fill: none;
-  stroke: #9ca3af;
-  stroke-width: 2;
-  transition: transform 0.2s ease, stroke 0.2s ease;
-}
-
-.expansion-panel[open] .icon {
-  transform: rotate(180deg);
-}
-
-.content {
-  padding: 0 12px;
-  font-size: .8em;
 }
