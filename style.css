@@ -313,6 +313,13 @@ body, button, a {
   overflow: hidden;
 }
 
+.expansion-panel {
+  margin-top: 6px;
+  border-radius: 2px;
+  padding: 12px 0;
+  border: 1px solid #888;
+}
+
 .expansion-panel[open] {
   color: var(--font-color);
 }
@@ -321,7 +328,7 @@ body, button, a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px;
+  padding: 6px;
   cursor: pointer;
   transition: color 0.2s;
   user-select: none;
@@ -799,12 +806,11 @@ body, button, a {
   .tabs-container {
     height: 90vh;
     align-content: start;
-    justify-content: space-around;
+    justify-content: start;
   }
 
   .tab-label {
     order: 0;
-    width: 30%;
   }
 
   .alert {
