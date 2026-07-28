@@ -1,4 +1,13 @@
-document.getElementById('theme-button').addEventListener('click', changeTheme);
+const carousels = document.querySelectorAll('.carousel');
+const projectsTitles = document.getElementById('projects-titles');
+const projectsSection = document.getElementById('projects');
+const projectsImages = document.getElementById('projects-images').children;
+const description = document.getElementById('project-description');
+const expansionPanels = document.getElementById('expansion-panels');
+const linkContainer = document.getElementById('link-container');
+const projectsTabs = document.getElementById('projects-tabs');
+let indexOnFocus = 0;
+let z = projectsImages.length;
 
 function changeTheme() {
   const body = document.getElementById('body');
@@ -15,8 +24,6 @@ function changeTheme() {
     themeButton.setAttribute('class', 'theme-button');
   }
 }
-
-const carousels = document.querySelectorAll('.carousel');
 
 carousels.forEach((carousel) => {
   const track = carousel.querySelector('.carousel__track');
@@ -65,3 +72,85 @@ carousels.forEach((carousel) => {
     });
   });
 });
+
+function styleProjectOnFocus(index, projectColor) {
+  projectsTitles
+    .children[index].setAttribute('class', 'project-title project-title_selected');
+  projectsSection
+    .style.setProperty('--project-primary', projectColor);
+}
+
+async function selectProject(e) {
+  const indexToFocus = e.dataset.projectIndex;
+  if (indexToFocus == indexOnFocus) return;
+
+  focusTitle(indexToFocus);
+  styleProjectOnFocus(indexToFocus, e.dataset.projectColor);
+  setProjectText(indexToFocus);
+
+  const itemOnFocus = projectsImages[indexOnFocus];
+  const itemToFocus = projectsImages[indexToFocus];
+
+  itemOnFocus.classList.remove('mockup-container_selected', 'mockup-container_slide');
+  itemToFocus.classList.add('mockup-container_selected', 'mockup-container_slide');
+  setTimeout(() => itemToFocus.style.setProperty('z-index', z++), 500);
+  setTimeout(() => itemOnFocus.style.setProperty('transform', `rotate(${-2}deg)`), 900);
+
+  let rotationDegrees = -4;
+
+  for (let index = 0; index < projectsImages.length; index++) {
+    const image = projectsImages[index];
+    image.style.setProperty('transform', 'rotate(0)');
+    if (index == indexToFocus || index == indexOnFocus) continue;
+    setTimeout(() => {
+      image.style.setProperty('transform', `rotate(${rotationDegrees}deg)`)
+      rotationDegrees -= 2;
+    }, 900);
+  }
+
+  indexOnFocus = Number(indexToFocus);
+
+}
+
+function focusTitle(index) {
+  const titleElement = projectsTitles.children[index];
+  const currentlyFocusTitle = projectsTitles.getElementsByClassName('project-title project-title_selected')[0];
+  currentlyFocusTitle.classList.remove('project-title_selected');
+  projectsTitles.scrollTo({ top: index * 35, behavior: 'smooth' });
+  titleElement.classList.add('project-title_selected');
+}
+
+const titles = Array.from(projectsTitles.children);
+
+for (const i in titles) titles[i].addEventListener('click', (e) => selectProject(e.target));
+
+document.getElementById('theme-button').addEventListener('click', changeTheme);
+
+function setProjectText(index) {
+  projectsTabs.classList.add('fade');
+  setLinks(index);
+  setPanels(index);
+  setTimeout(() => projectsTabs.classList.remove('fade'), 200);
+}
+
+function setPanels(index) {
+  let firstPanelOpened = false;
+  for (const panel of expansionPanels.children) {
+    if (panel.getAttribute('open')) panel.setAttribute('open', false)
+    if (panel.dataset.projectIndex == index) {
+      panel.setAttribute('style', 'display: block;');
+      if (!firstPanelOpened) {
+        panel.setAttribute('open', true);
+        firstPanelOpened = true;
+      }
+    }
+    else panel.setAttribute('style', 'display: none;');
+  }
+}
+
+function setLinks(index) {
+  for (const child of linkContainer.children) {
+    if (child.dataset.projectIndex == index) child.setAttribute('style', 'display: block;');
+    else child.setAttribute('style', 'display: none;');
+  }
+}

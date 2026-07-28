@@ -231,6 +231,10 @@ body, button, a {
   height: 45vh;
 }
 
+.section__container_relative {
+  position: relative;
+}
+
 .title-container {
   height: 10vh;
   margin: 0 auto;
@@ -270,7 +274,7 @@ body, button, a {
 
 .tab-label {
   width: 104px;
-  border-bottom: 1px solid #888;
+  border: 1px solid #888;
   border-top-right-radius: 2px;
   border-top-left-radius: 2px;
   text-align: center;
@@ -296,7 +300,10 @@ body, button, a {
 }
 
 .tabs-container input[type="radio"]:checked + .tab-label {
-  border-bottom: 2px solid var(--project-primary);
+  font-weight: 500;
+  color: contrast-color(var(--project-primary));
+  border-color: var(--project-primary);
+  background-color: var(--project-primary);
 }
 
 .expansion-panels {
@@ -471,9 +478,9 @@ body, button, a {
 }
 
 .carousel__item {
-  flex: 0 0 100%;
   scroll-snap-align: start;
   display: flex;
+  flex: 0 0 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -488,7 +495,7 @@ body, button, a {
   padding: 6px;
   object-fit: cover;
   background-color: #111;
-  aspect-ratio: 1 / 2;
+  aspect-ratio: 9 / 16;
 }
 
 .alert {
@@ -500,6 +507,86 @@ body, button, a {
   background-color: rgba(65, 184, 131, .1);
   color: var(--project-primary);
   position: relative;
+}
+
+/* On review */
+
+.projects-titles {
+  min-width: 150px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-title {
+  padding-right: 6px;
+  font-size: 1.6rem;
+  text-align: right;
+  transition: all .3s;
+  color: #888;
+}
+
+.project-title_selected {
+  color: var(--font-color);
+  font-size: 2rem;
+  position: relative;
+}
+
+.project-title_selected::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 5px);
+  left: 10px;
+  border-radius: 1px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #fff; 
+}
+
+.mockup-container {
+  height: 85%;
+  width: 85%;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  transition: transform .3s;
+  display: flex;
+}
+
+.mockup-container_slide {
+  animation-name: slide;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+
+.mockup {
+  border: 1px solid #888;
+  border-radius: 12px;
+  padding: 6px;
+  object-fit: cover;
+  background-color: #111;
+  position: absolute;
+  left: 0;
+}
+
+.mockup_mobile {
+  width: auto;
+  height: 90%;
+  aspect-ratio: 9 / 16;
+  z-index: 10;
+}
+
+.mockup_desktop {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  right: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
 }
 
 @media (min-width: 576px) {
@@ -565,6 +652,18 @@ body, button, a {
   .tabs-container { max-width: 710px; }
 
   .alert { font-size: 1.6rem; }
+
+  .mockup_mobile {
+    height: 100%;
+    max-height: 350px;
+  }
+
+  .mockup_desktop {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    max-height: 100%;
+  }
 
 }
 
@@ -733,11 +832,27 @@ body, button, a {
   .carousel-btn:hover { background: #aaa; }
 
   .tab-label:hover {
-    opacity: .8;
+    border-color: var(--project-primary);
   }
 
   .expansion-panel summary:hover {
     color: #888;
+  }
+
+  /* On review */
+
+  .project-title:hover {
+    opacity: 1;
+    cursor: pointer;
+    color: black;
+    background-color: #e7e7e7;
+  }
+
+  .project-title_selected:hover {
+    color: #fff;
+    background-color: var(--projects-accent);
+    opacity: 1;
+    cursor: default;
   }
 
 }
