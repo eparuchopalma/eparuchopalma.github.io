@@ -76,7 +76,7 @@ carousels.forEach((carousel) => {
 
 function styleProjectOnFocus(index, projectColor) {
   projectsTitles
-    .children[index].setAttribute('class', 'project-title project-title_selected');
+    .children[index].classList.add('project-title_selected');
   projectsSection
     .style.setProperty('--project-color', projectColor);
 }
@@ -139,19 +139,19 @@ function setPanels(index) {
   for (const panel of expansionPanels.children) {
     if (panel.getAttribute('open')) panel.setAttribute('open', false)
     if (panel.dataset.projectIndex == index) {
-      panel.setAttribute('style', 'display: block;');
+      panel.style.setProperty('display', 'block');
       if (!firstPanelOpened) {
         panel.setAttribute('open', true);
         firstPanelOpened = true;
       }
     }
-    else panel.setAttribute('style', 'display: none;');
+    else panel.style.setProperty('display', 'none');
   }
 }
 
 function setLinks(index) {
   for (const child of linkContainer.children) {
-    if (child.dataset.projectIndex == index) child.setAttribute('style', 'display: block;');
-    else child.setAttribute('style', 'display: none;');
+    if (child.dataset.projectIndex == index) child.style.setProperty('display', 'block');
+    else child.style.setProperty('display', 'none');
   }
 }

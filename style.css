@@ -10,11 +10,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--font-color);
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
   font-style: normal;
 }
 
@@ -27,7 +25,10 @@ h1, h2, h3, h4 {
 
 ul { list-style: none; }
 
-a { text-decoration: none; }
+a {
+  color: var(--font-color);
+  text-decoration: none;
+}
 
 img {
   width: 100%;
@@ -36,6 +37,7 @@ img {
 
 .body {
   color: var(--font-color);
+  font-weight: 400;
   background-color: var(--bg-color);
   transition: color, background-color .5s;
 }
@@ -291,10 +293,9 @@ img {
 
 .tab-label {
   width: 104px;
-  border: 1px solid #888;
-  border-top-right-radius: 2px;
-  border-top-left-radius: 2px;
+  border-radius: 2px;
   text-align: center;
+  background-color: var(--accent);
   transition: background-color .3s;
   cursor: pointer;
   order: 2;
@@ -318,9 +319,8 @@ img {
 
 .tabs-container input[type="radio"]:checked + .tab-label {
   font-weight: 500;
-  color: contrast-color(var(--project-color));
-  border-color: var(--project-color);
-  background-color: var(--project-color);
+  background-color: var(--font-color);
+  color: var(--bg-color);
 }
 
 .expansion-panels {
@@ -338,7 +338,7 @@ img {
 }
 
 .expansion-panel[open] {
-  color: var(--font-color);
+  border-left: 2px solid var(--project-color);
 }
 
 .expansion-panel summary {
@@ -347,7 +347,6 @@ img {
   align-items: center;
   padding: 6px;
   cursor: pointer;
-  transition: color 0.2s;
   user-select: none;
   font-weight: 500;
 }
@@ -857,11 +856,8 @@ img {
   .carousel-btn:hover { background: #aaa; }
 
   .tab-label:hover {
-    border-color: var(--project-color);
-  }
-
-  .expansion-panel summary:hover {
-    color: #888;
+    background-color: var(--font-color);
+    color: var(--bg-color);
   }
 
   .project-title:hover {
