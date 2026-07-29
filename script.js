@@ -6,22 +6,23 @@ const description = document.getElementById('project-description');
 const expansionPanels = document.getElementById('expansion-panels');
 const linkContainer = document.getElementById('link-container');
 const projectsTabs = document.getElementById('projects-tabs');
+const themeButton = document.getElementById('theme-button');
+const body = document.getElementById('body');
+
 let indexOnFocus = 0;
 let z = projectsImages.length;
 
 function changeTheme() {
-  const body = document.getElementById('body');
-  const themeButton = document.getElementById('theme-button');
-  const themeIsLight = body.style.getPropertyValue('--bg-color') === '#fff';
+  const themeIsDark = body.classList.contains('body_dark');
 
-  if (themeIsLight) {
-    body.style.setProperty('--bg-color', '#191919');
-    body.style.setProperty('--font-color', '#fff');
-    themeButton.setAttribute('class', 'theme-button theme-button_dark');
+  if (themeIsDark) {
+    body.classList.add('body_light');
+    body.classList.remove('body_dark');
+    themeButton.classList.remove('theme-button_dark');
   } else {
-    body.style.setProperty('--bg-color', '#fff');
-    body.style.setProperty('--font-color', '#191919');
-    themeButton.setAttribute('class', 'theme-button');
+    body.classList.add('body_dark');
+    body.classList.remove('body_light');
+    themeButton.classList.add('theme-button_dark');
   }
 }
 
@@ -77,7 +78,7 @@ function styleProjectOnFocus(index, projectColor) {
   projectsTitles
     .children[index].setAttribute('class', 'project-title project-title_selected');
   projectsSection
-    .style.setProperty('--project-primary', projectColor);
+    .style.setProperty('--project-color', projectColor);
 }
 
 async function selectProject(e) {
@@ -124,7 +125,7 @@ const titles = Array.from(projectsTitles.children);
 
 for (const i in titles) titles[i].addEventListener('click', (e) => selectProject(e.target));
 
-document.getElementById('theme-button').addEventListener('click', changeTheme);
+themeButton.addEventListener('click', changeTheme);
 
 function setProjectText(index) {
   projectsTabs.classList.add('fade');

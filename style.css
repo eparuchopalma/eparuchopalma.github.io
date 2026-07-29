@@ -1,14 +1,21 @@
 :root {
+  --light: #fff;
+  --dark: #191919;
+  --accent-light: #eee;
+  --accent-dark: #242424;
   font-size: 62.5%;
-  --projects-accent: black;
-  --font-color: #fff;
-  --bg-color: #191919;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--font-color);
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1, h2, h3, h4 {
@@ -27,19 +34,22 @@ img {
   height: 100%;
 }
 
-body, button, a {
+.body {
   color: var(--font-color);
-  font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  background-color: var(--bg-color);
+  transition: color, background-color .5s;
 }
 
-.body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
-  transition: color, background-color .5s;
+.body_dark {
+  --font-color: var(--light);
+  --bg-color: var(--dark);
+  --accent: var(--accent-dark);
+}
+
+.body_light {
+  --font-color: var(--dark);
+  --bg-color: var(--light);
+  --accent: var(--accent-light);
 }
 
 .main {
@@ -106,11 +116,16 @@ body, button, a {
 .headline__label {
   width: 104px;
   height: 24px;
-  padding: 18px 0 20px;  display: flex;
+  padding: 18px 0 20px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2.4rem;
   position: absolute;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.4rem;
 }
 
 .headline__label_left {
@@ -223,6 +238,7 @@ body, button, a {
 }
 
 .section {
+  --project-color: #888;
   height: 100vh;
   scroll-snap-align: start;
 }
@@ -236,6 +252,7 @@ body, button, a {
 }
 
 .title-container {
+  width: 100%;
   height: 10vh;
   margin: 0 auto;
   display: flex;
@@ -301,9 +318,9 @@ body, button, a {
 
 .tabs-container input[type="radio"]:checked + .tab-label {
   font-weight: 500;
-  color: contrast-color(var(--project-primary));
-  border-color: var(--project-primary);
-  background-color: var(--project-primary);
+  color: contrast-color(var(--project-color));
+  border-color: var(--project-color);
+  background-color: var(--project-color);
 }
 
 .expansion-panels {
@@ -317,7 +334,7 @@ body, button, a {
   margin-top: 6px;
   border-radius: 2px;
   padding: 12px 0;
-  border: 1px solid #888;
+  background-color: var(--accent);
 }
 
 .expansion-panel[open] {
@@ -363,18 +380,18 @@ body, button, a {
   align-items: center;
   background-repeat: no-repeat;
   background-position: 6px;
-  background-size: 2rem;
+  background-size: 24px;
   position: relative;
 }
 
 .link::before {
   content: "";
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   position: absolute;
   left: 6px;
-  top: calc(50% - 16px);
+  top: calc(50% - 12px);
   background-color: #191919;
   z-index: -1;
 }
@@ -512,14 +529,13 @@ body, button, a {
   border-radius: 2px;
   text-align: center;
   background-color: rgba(65, 184, 131, .1);
-  color: var(--project-primary);
+  color: var(--project-color);
   position: relative;
 }
 
-/* On review */
-
 .projects-titles {
-  min-width: 150px;
+  width: 100%;
+  max-width: 300px;
   position: relative;
   overflow: hidden;
 }
@@ -527,12 +543,13 @@ body, button, a {
 .project-title {
   padding-right: 6px;
   font-size: 1.6rem;
-  text-align: right;
+  text-align: center;
   transition: all .3s;
-  color: #888;
+  color: #8888;
 }
 
 .project-title_selected {
+  background-color: var(--accent);
   color: var(--font-color);
   font-size: 2rem;
   position: relative;
@@ -702,6 +719,7 @@ body, button, a {
     align-items: center;
     grid-template-rows: 1fr 11fr;
     grid-template-columns: 1fr 1fr;
+    gap: 12px;
   }
 
   .title-container {
@@ -766,6 +784,7 @@ body, button, a {
     align-items: center;
     grid-template-rows: 1fr 11fr;
     grid-template-columns: 3fr 2fr;
+    gap: 12px;
   }
 
   .title-container {
@@ -838,26 +857,19 @@ body, button, a {
   .carousel-btn:hover { background: #aaa; }
 
   .tab-label:hover {
-    border-color: var(--project-primary);
+    border-color: var(--project-color);
   }
 
   .expansion-panel summary:hover {
     color: #888;
   }
 
-  /* On review */
-
   .project-title:hover {
-    opacity: 1;
+    color: var(--font-color);
     cursor: pointer;
-    color: black;
-    background-color: #e7e7e7;
   }
 
   .project-title_selected:hover {
-    color: #fff;
-    background-color: var(--projects-accent);
-    opacity: 1;
     cursor: default;
   }
 
