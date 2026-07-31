@@ -35,13 +35,13 @@
         <a class="cta cta_primary" href="#contact">Contacto</a>
       </div>
       <a class="lang-link" href="./index_en.html">Go to the English version</a>
-      <picture class="picture-container">
+      <picture class="picture-container picture-container_animate">
         <source media="(min-width: 650px)" srcset="assets/author_lg.webp">
         <source media="(min-width: 465px)" srcset="assets/author_md.webp">
         <img
         src="assets/author_sm.webp"
         alt="A black-and-white portrait of a man in a t-shirt and jeans with his hands in his pockets, looking to the side, against a brick wall"
-        class="picture">
+        class="picture picture_position-top">
       </picture>
     </header>
 
@@ -62,39 +62,33 @@
           <div class="carousel__track">
             <div class="carousel__item">
               <img
-              class="project-image project-image_mobile"
+              class="mockup mockup_mobile"
               src="assets/mantra_mobile_1.webp"
               alt="Vista de escritorio de Mantra">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_1.webp">
-                <img
-                src="assets/mantra_mobile_4.webp"
-                alt="Vista de escritorio de Mantra">
-              </picture>
+              <img
+              class="mockup mockup_desktop"
+              src="assets/mantra_desktop_1.webp"
+              alt="Vista de escritorio de Mantra">
             </div>
             <div class="carousel__item">
               <img
-              class="project-image project-image_mobile"
+              class="mockup mockup_mobile"
               src="assets/mantra_mobile_2.webp"
               alt="Vista de escritorio de Mantra">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_2.webp">
-                <img
-                src="assets/mantra_mobile_5.webp"
-                alt="Vista de escritorio de Mantra">
-              </picture>
+              <img
+              class="mockup mockup_desktop"
+              src="assets/mantra_desktop_2.webp"
+              alt="Vista de escritorio de Mantra">
             </div>
             <div class="carousel__item">
               <img
-              class="project-image project-image_mobile"
+              class="mockup mockup_mobile"
               src="assets/mantra_mobile_3.webp"
               alt="Vista de escritorio de Mantra">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_1.webp">
-                <img
-                src="assets/mantra_mobile_6.webp"
-                alt="Vista de escritorio de Mantra">
-              </picture>
+              <img
+              class="mockup mockup_desktop"
+              src="assets/mantra_desktop_1.webp"
+              alt="Vista de escritorio de Mantra">
             </div>
           </div>
         </div>
@@ -107,7 +101,7 @@
             <div class="expansion-panels">
               <details class="expansion-panel" name="features" open>
                 <summary>
-                  <span>Estabilidad e impacto financiero</span>
+                  <span>Impacto financiero</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
@@ -117,7 +111,7 @@
 
               <details class="expansion-panel" name="features">
                 <summary>
-                  <span>Consistencia y resultados</span>
+                  <span>Resultados</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
@@ -127,21 +121,11 @@
 
               <details class="expansion-panel" name="features">
                 <summary>
-                  <span>Integración y disponibilidad</span>
+                  <span>Trabajo en equipo</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <p>Permitió por primera vez la integración multidepartamental y el acceso remoto a la principal herramienta de gestión y fuente de la verdad.</p>
-                </div>
-              </details>
-
-              <details class="expansion-panel" name="features">
-                <summary>
-                  <span>Seguridad y Centralización Operativa</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">
-                  Consolidó la consistencia de datos y proporcionó acceso remoto para los equipos de trabajo.
                 </div>
               </details>
             </div>
@@ -192,7 +176,7 @@
           <input type="radio" id="tab3" name="tab-group">
           <label for="tab3" class="tab-label">Enlaces</label>
           <div class="tab-content">
-            <p class="alert">Mantra ahora pertenece a Microfilms Center</p>
+            <p class="alert">Ahora pertenece a Microfilms Center</p>
           </div>
         </div>
       </div>
@@ -213,7 +197,7 @@
           </li>
         </ul>
       </div>
-      <div id="projects-images" class="section__container section__container_lg section__container_relative">
+      <div class="section__container section__container_lg section__container_relative">
         <div class="mockup-container mockup-container_selected" data-project-index="0" data-project-color="#BC5536" style="z-index: 3;">
           <img class="mockup mockup_mobile" src="assets/luthen_mobile_1.webp" alt="Vista móvil de Luthen">
           <img class="mockup mockup_desktop" src="assets/luthen_desktop_1.webp" alt="Vista de escritorio de Luthen">
@@ -227,7 +211,8 @@
           <img class="mockup mockup_desktop" src="assets/pensive_desktop.webp" alt="Vista de escritorio de Pensive">
         </div>
       </div>
-      <div class="section__container section__container_sm">
+
+      <div id="projects-images" class="section__container section__container_sm">
         <div id="projects-tabs" class="tabs-container">
           <input type="radio" id="project-tab1" name="projects-tabs" checked>
           <label for="project-tab1" class="tab-label">Stack</label>
@@ -333,31 +318,31 @@
           <div class="tab-content">
             <ul id="link-container">
               <li data-project-index="0">
-                <a href="https://github.com/eparuchopalma/luthen-ui.git" class="link link_github">Código - Front-End</a>
+                <a target="_blank" href="https://github.com/eparuchopalma/luthen-ui.git" class="link link_github">Código - Front-End</a>
               </li>
               <li data-project-index="0">
-                <a href="https://github.com/eparuchopalma/luthen-api.git" class="link link_github">Código - Back-End</a>
+                <a target="_blank" href="https://github.com/eparuchopalma/luthen-api.git" class="link link_github">Código - Back-End</a>
               </li>
               <li data-project-index="0">
-                <a href="#" class="link link_vercel">Demo</a>
+                <a target="_blank" href="#" class="link link_vercel">Demo</a>
               </li>
               <li data-project-index="1" style="display: none;">
-                <a href="https://github.com/eparuchopalma/lighthouse-ui.git" class="link link_github">Código - Front-End</a>
+                <a target="_blank" href="https://github.com/eparuchopalma/lighthouse-ui.git" class="link link_github">Código - Front-End</a>
               </li>
               <li data-project-index="1" style="display: none;">
-                <a href="https://github.com/eparuchopalma/lighthouse-api.git" class="link link_github">Código - Back-End</a>
+                <a target="_blank" href="https://github.com/eparuchopalma/lighthouse-api.git" class="link link_github">Código - Back-End</a>
               </li>
               <li data-project-index="1" style="display: none;">
-                <a href="#" class="link link_vercel">Demo</a>
+                <a target="_blank" href="#" class="link link_vercel">Demo</a>
               </li>
               <li data-project-index="2" style="display: none;">
-                <a href="https://github.com/eparuchopalma/pensive-ui.git" class="link link_github">Código - Front-End</a>
+                <a target="_blank" href="https://github.com/eparuchopalma/pensive-ui.git" class="link link_github">Código - Front-End</a>
               </li>
               <li data-project-index="2" style="display: none;">
-                <a href="https://github.com/eparuchopalma/pensive-api.git" class="link link_github">Código - Back-End</a>
+                <a target="_blank" href="https://github.com/eparuchopalma/pensive-api.git" class="link link_github">Código - Back-End</a>
               </li>
               <li data-project-index="2" style="display: none;">
-                <a href="#" class="link link_github">Demo</a>
+                <a target="_blank" href="#" class="link link_github">Demo</a>
               </li>
             </ul>
           </div>
@@ -365,30 +350,32 @@
       </div>
     </section>
 
-    <!-- <section id="about" class="section section_grid">
-      <h2 class="section__title">Acerca de mí</h2>
-      <div class="section__container">
-        <picture class="picture-container">
-          <source media="(min-width: 576px)" srcset="assets/setup_portrait.webp">
-          <img
-          src="assets/setup_landscape_1.webp"
-          alt="A home office setup featuring a laptop displaying code, a row of books, a notebook, and a framed family photo on a wooden desk"
-          class="picture">
-        </picture>
+    <section id="about" class="section">
+      <div class="title-container">
+        <h2 class="section__title">Acerca de mí</h2>
       </div>
-      <div class="section__container">
+      <div class="section__container section__container_lg">
         <p>Me dedico al desarrollo web con enfoque en el front-end, la ingeniería robusta y el diseño UI/UX de alto nivel. Para mí, el desarrollo consiste en crear experiencias únicas, fuera de lo promedio y destacables.</p>
         <br>
         <p>Mi kit de herramientas principal se centra en <strong>Vue.js, TypeScript, y CSS</strong>, respaldado por experiencia full-stack en <strong>Node.js, Express, y bases de datos (SQL/NoSQL)</strong>. Esto me ayuda a construir front-ends que se integren eficazmente con back-ends complejos.  Como estudiante de por vida, continuamente optimizo mi flujo de trabajo integrando herramientas de IA.</p>
         <br>
         <p>Más allá del código, he construido una base sólida de disciplina y habilidades de gestión que he pulido durante los últimos años dedicándome a mi hogar y a mi familia. Busco oportunidades remotas donde esta ética de trabajo y compromiso con la calidad puedan generar resultados de gran impacto. Fuera de línea, normalmente me verás levantando pesas, leyendo o en algún juego de mesa con mi esposa e hija.</p>
       </div>
+      <div class="section__container section__container_sm">
+        <picture>
+          <source media="(min-width: 576px)" srcset="assets/setup_lg.webp">
+          <img
+          src="assets/setup_sm.webp"
+          alt="A home office setup featuring a laptop displaying code, a row of books, a notebook, and a framed family photo on a wooden desk"
+          class="picture picture_position-bottom">
+        </picture>
+      </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- <section id="contact" class="section">
       <h2 class="section__title">Gracias</h2>
       <br>
-      <p class="subtitle subtitle_sm">Por tu invaluable tiempo</p>
+      <p class="subtitle">Por tu invaluable tiempo</p>
       <br>
       <p>
         <strong>Agrégame a tu red</strong>
