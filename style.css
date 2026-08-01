@@ -230,6 +230,7 @@ img {
 }
 
 .picture {
+  max-width: 500px;
   filter: grayscale(1);
   object-fit: cover;
 }
@@ -260,18 +261,23 @@ img {
 }
 
 .section__title {
+  text-align: right;
   font-size: 4rem;
   font-weight: 600;
 }
 
 .section__subtitle { margin-bottom: 6px; }
 
-.section__container_lg {
-  height: 35vh;
+.section__container {
+  height: 45vh;
 }
 
 .section__container_sm {
-  height: 55vh;
+  height: 40vh;
+}
+
+.section__container_lg {
+  height: 50vh;
 }
 
 .section__container_relative {
@@ -349,7 +355,7 @@ img {
   transition: background 0.2s, transform 0.1s;
   transform: translateY(-50%);
   position: absolute;
-  bottom: 0;
+  bottom: 10%;
   cursor: pointer;
   z-index: 20;
 }
@@ -387,8 +393,12 @@ img {
   transform: scale(1.2);
 }
 
+.projects-titles {
+  height: 64px;
+}
+
 .tabs-container {
-  height: 100%;
+  height: calc(100% - 60px);
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
@@ -397,6 +407,10 @@ img {
   align-content: space-between;
   flex-wrap: wrap;
   gap: 2px;
+}
+
+.tabs-container_h-full {
+  height: 100%;
 }
 
 .tabs-container input[type="radio"] {
@@ -553,15 +567,10 @@ img {
   position: relative;
 }
 
-.projects-titles {
-  width: 100%;
-  max-width: 300px;
-  position: relative;
-  overflow: hidden;
-}
-
 .project-title {
-  padding-right: 6px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
   text-align: center;
   transition: all .3s;
   color: #8888;
@@ -648,6 +657,8 @@ img {
 
   .carousel { max-width: 710px; }
 
+  .project-title { max-width: 710px; }
+
   .tabs-container { max-width: 710px; }
 
 }
@@ -671,16 +682,11 @@ img {
 
 @media (max-width: 950px) and (orientation: landscape) {
 
-  .section__title {
-    font-size: 4rem;
-  }
-
   .section {
-    height: 100vh;
     display: grid;
     align-items: start;
     grid-template-rows: 1fr 11fr;
-    grid-template-columns: 3fr 9fr;
+    grid-template-columns: 1fr 3fr;
   }
 
   .title-container {
@@ -691,10 +697,6 @@ img {
   .section__container {
     height: 84vh;
     padding-top: 6px;
-  }
-
-  .mockup_mobile {
-    top: 0;
   }
 
   .mockup_desktop {
@@ -726,7 +728,6 @@ img {
 
   .section {
     display: grid;
-    align-items: center;
     grid-template-rows: 1fr 11fr;
     grid-template-columns: 3fr 2fr;
   }
@@ -744,11 +745,14 @@ img {
   
   .section__container {
     height: calc(100vh - 98px);
-    padding-top: 12px;
+    height: 60vh;
+    align-self: center;
   }
 
   .carousel-btn {
-    bottom: 30%;
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
   }
 
   .tabs-container {
@@ -765,6 +769,7 @@ img {
   }
 
   .tabs-container {
+    margin-top: 12px;
     padding-left: 12px;
   }
 

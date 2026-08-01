@@ -50,7 +50,7 @@
         <h2 class="section__title">Mantra</h2>
         <p class="section__subtitle">App de Help Desk<br>Microfilms Center</p>
       </div>
-      <div class="section__container section__container_lg">
+      <div class="section__container">
         <div class="carousel">
           <div class="carousel-dots">
             <span class="dot active"></span>
@@ -93,8 +93,8 @@
           </div>
         </div>
       </div>
-      <div class="section__container section__container_sm">
-        <div class="tabs-container">
+      <div class="section__container">
+        <div class="tabs-container tabs-container_h-full">
           <input type="radio" id="tab1" name="tab-group" checked>
           <label for="tab1" class="tab-label">Impacto</label>
           <div class="tab-content">
@@ -185,19 +185,11 @@
     <section id="projects" class="section" style="--project-color: #BC5536;">
       <div class="title-container">
         <h2 class="section__title">Proyectos</h2>
-        <ul id="projects-titles" class="projects-titles">
-          <li class="project-title project-title_selected" data-project-index="0" data-project-color="#BC5536">
-            Luthen
-          </li>
-          <li class="project-title" data-project-index="1" data-project-color="#202020">
-            Lighthouse
-          </li>
-          <li class="project-title" data-project-index="2" data-project-color="#3de">
-            Pensive
-          </li>
-        </ul>
+        <p class="section__subtitle">
+          Secundarios
+        </p>
       </div>
-      <div class="section__container section__container_lg section__container_relative">
+      <div id="projects-images" class="section__container section__container_relative section__container_sm">
         <div class="mockup-container mockup-container_selected" data-project-index="0" data-project-color="#BC5536" style="z-index: 3;">
           <img class="mockup mockup_mobile" src="assets/luthen_mobile_1.webp" alt="Vista móvil de Luthen">
           <img class="mockup mockup_desktop" src="assets/luthen_desktop_1.webp" alt="Vista de escritorio de Luthen">
@@ -212,7 +204,18 @@
         </div>
       </div>
 
-      <div id="projects-images" class="section__container section__container_sm">
+      <div class="section__container section__container_lg">
+        <ul id="projects-titles" class="projects-titles">
+          <li class="project-title project-title_selected" data-project-index="0" data-project-color="#BC5536">
+            Luthen
+          </li>
+          <li class="project-title" data-project-index="1" data-project-color="#202020">
+            Lighthouse
+          </li>
+          <li class="project-title" data-project-index="2" data-project-color="#3de">
+            Pensive
+          </li>
+        </ul>
         <div id="projects-tabs" class="tabs-container">
           <input type="radio" id="project-tab1" name="projects-tabs" checked>
           <label for="project-tab1" class="tab-label">Stack</label>
@@ -349,29 +352,6 @@
         </div>
       </div>
     </section>
-
-    <section id="about" class="section">
-      <div class="title-container">
-        <h2 class="section__title">Acerca de mí</h2>
-      </div>
-      <div class="section__container section__container_lg">
-        <p>Me dedico al desarrollo web con enfoque en el front-end, la ingeniería robusta y el diseño UI/UX de alto nivel. Para mí, el desarrollo consiste en crear experiencias únicas, fuera de lo promedio y destacables.</p>
-        <br>
-        <p>Mi kit de herramientas principal se centra en <strong>Vue.js, TypeScript, y CSS</strong>, respaldado por experiencia full-stack en <strong>Node.js, Express, y bases de datos (SQL/NoSQL)</strong>. Esto me ayuda a construir front-ends que se integren eficazmente con back-ends complejos.  Como estudiante de por vida, continuamente optimizo mi flujo de trabajo integrando herramientas de IA.</p>
-        <br>
-        <p>Más allá del código, he construido una base sólida de disciplina y habilidades de gestión que he pulido durante los últimos años dedicándome a mi hogar y a mi familia. Busco oportunidades remotas donde esta ética de trabajo y compromiso con la calidad puedan generar resultados de gran impacto. Fuera de línea, normalmente me verás levantando pesas, leyendo o en algún juego de mesa con mi esposa e hija.</p>
-      </div>
-      <div class="section__container section__container_sm">
-        <picture>
-          <source media="(min-width: 576px)" srcset="assets/setup_lg.webp">
-          <img
-          src="assets/setup_sm.webp"
-          alt="A home office setup featuring a laptop displaying code, a row of books, a notebook, and a framed family photo on a wooden desk"
-          class="picture picture_position-bottom">
-        </picture>
-      </div>
-    </section>
-
     <!-- <section id="contact" class="section">
       <h2 class="section__title">Gracias</h2>
       <br>
@@ -389,9 +369,6 @@
       </div>
     </section> -->
   </main>
-  <script>
-    const projectsPath = './json/projects.json'
-  </script>
   <script src="script.js">
   </script>
 </body>
