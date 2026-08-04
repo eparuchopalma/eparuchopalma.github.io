@@ -81,8 +81,8 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 6px;
+  left: calc(50% - 12px);
   cursor: pointer;
   z-index: 10;
   transition: transform .5s;
@@ -105,9 +105,8 @@ img {
 }
 
 .headline {
-  width: fit-content;
-  height: fit-content;
-  margin-top: 12px;
+  height: 11rem;
+  margin-top: 24px;
   font-size: 7.2rem;
   font-weight: 600;
   text-align: center;
@@ -116,29 +115,22 @@ img {
 }
 
 .headline__label {
-  width: 104px;
-  height: 24px;
-  padding: 18px 0 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
   font-size: 2.4rem;
+  position: absolute;
 }
 
 .headline__label_left {
-  top: 0;
-  margin-bottom: -1.6rem;
+  top: -4px;
+  left: 2px;
 }
 
 .headline__label_right {
-  right: -6px;
-  bottom: -20px;
-  justify-self: end;
+  bottom: 0;
+  right: 2px;
 }
 
 .subtitle {
@@ -527,10 +519,10 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
+  background-color: #191919;
   position: absolute;
   left: 6px;
   top: calc(50% - 12px);
-  background-color: #191919;
   z-index: -1;
 }
 
@@ -549,7 +541,7 @@ img {
 }
 
 .link_email {
-  background-image: url('https://img.icons8.com/?size=100&id=Zp93Jltra4ez&format=png&color=ffffff');
+  background-image: url('https://img.icons8.com/?size=100&id=jicLxt1sA2qa&format=png&color=ffffff');
 }
 
 .link_linkedin {
@@ -677,6 +669,7 @@ img {
 @media (min-width: 768px) {
 
   .headline {
+    height: 12.6rem;
     font-size: 8.4rem;
   }
 
@@ -692,6 +685,10 @@ img {
 }
 
 @media (max-width: 950px) and (orientation: landscape) {
+
+  .theme-button {
+    left: 12px;
+  }
 
   .section_grid {
     display: grid;
@@ -735,7 +732,12 @@ img {
     font-size: 2rem;
   }
 
+  .theme-button {
+    left: 12px;
+  }
+
   .headline {
+    height: 18rem;
     font-size: 12rem;
   }
 
@@ -775,10 +777,6 @@ img {
 
   .tab-label {
     order: 0;
-  }
-
-  .link, .link::after {
-    background-size: 2.4rem;
   }
 
   .tabs-container {
