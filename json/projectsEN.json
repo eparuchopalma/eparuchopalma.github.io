@@ -1,5 +1,17 @@
 [
   {
+    "title": "Mantra",
+    "description": "The Help Desk Web Application used by Microfilms Center from Venezuela.",
+    "desktopCover": "assets/mantra_desktop.png",
+    "mobileCover": "assets/mantra_mobile.png",
+    "stack": ["Vue.js", "Vuetify.js", "Node.js", "Express.js", "MongoDB"],
+    "links": {
+    },
+    "mainColor": "#fff",
+    "secondaryColor": "#11BD56",
+    "isDark": false
+  },
+  {
     "title": "Luthen",
     "description": "Financial log. Save records, manage them in different funds, analize your stats.",
     "desktopCover": "assets/luthen_desktop.png",
@@ -13,18 +25,6 @@
     "mainColor": "#242225",
     "secondaryColor": "#BC5536",
     "isDark": true
-  },
-  {
-    "title": "Mantra",
-    "description": "The Help Desk Web Application used by Microfilms Center from Venezuela.",
-    "desktopCover": "assets/mantra_desktop.png",
-    "mobileCover": "assets/mantra_mobile.png",
-    "stack": ["Vue.js", "Vuetify.js", "Node.js", "Express.js", "MongoDB"],
-    "links": {
-    },
-    "mainColor": "#fff",
-    "secondaryColor": "#11BD56",
-    "isDark": false
   },
   {
     "title": "Lighthouse",

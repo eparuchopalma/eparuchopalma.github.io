@@ -1,148 +1,157 @@
-let projects;
-
-const titleContainer = document.getElementById('title-container');
-const imageContainer = document.getElementById('project-images-list');
+const carousels = document.querySelectorAll('.carousel');
+const projectsTitles = document.getElementById('projects-titles');
+const projectsSection = document.getElementById('projects');
+const projectsImages = document.getElementById('projects-images').children;
 const description = document.getElementById('project-description');
-const labelContainer = document.getElementById('label-container');
+const expansionPanels = document.getElementById('expansion-panels');
 const linkContainer = document.getElementById('link-container');
+const projectsTabs = document.getElementById('projects-tabs');
+const themeButton = document.getElementById('theme-button');
+const body = document.getElementById('body');
+
 let indexOnFocus = 0;
+let z = projectsImages.length;
 
-document.getElementById('theme-button').addEventListener('click', changeTheme);
+function changeTheme() {
+  const themeIsDark = body.classList.contains('body_dark');
 
-for (const title of titleContainer.children) {
-  title.addEventListener('click', () => selectProject(Number(title.dataset.projectIndex)));
+  if (themeIsDark) {
+    body.classList.add('body_light');
+    body.classList.remove('body_dark');
+    themeButton.classList.remove('theme-button_dark');
+  } else {
+    body.classList.add('body_dark');
+    body.classList.remove('body_light');
+    themeButton.classList.add('theme-button_dark');
+  }
 }
 
-for (const item of imageContainer.children) {
-  item.addEventListener('click', () => selectProject(Number(item.dataset.projectIndex)));
+carousels.forEach((carousel) => {
+  const track = carousel.querySelector('.carousel__track');
+  const slides = carousel.querySelectorAll('.carousel__item');
+  const dots = carousel.querySelectorAll('.dot');
+  const btnPrev = carousel.querySelector('.btn-prev');
+  const btnNext = carousel.querySelector('.btn-next');
+
+  if (!track || !slides.length) return;
+
+  function moveCarousel(direction) {
+    const slideWidth = track.clientWidth;
+    track.scrollLeft += direction * slideWidth;
+  }
+
+  btnNext?.addEventListener('click', () => moveCarousel(1));
+  btnPrev?.addEventListener('click', () => moveCarousel(-1));
+
+  const observerOptions = {
+    root: track,
+    threshold: 0.5
+  };
+
+  const slidesArr = Array.from(slides);
+  slidesArr.forEach((slide, idx) => {
+    slide.dataset.carouselIndex = idx;
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const index = Number(entry.target.dataset.carouselIndex);
+
+        dots.forEach((dot) => dot.classList.remove('active'));
+        if (dots[index]) dots[index].classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  slidesArr.forEach((slide) => observer.observe(slide));
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      const slideWidth = track.clientWidth;
+      track.scrollLeft = index * slideWidth;
+    });
+  });
+});
+
+function styleProjectOnFocus(index, projectColor) {
+  projectsTitles
+    .children[index].classList.add('project-title_selected');
+  projectsSection
+    .style.setProperty('--project-color', projectColor);
 }
 
-async function setProjects() {
-  await getProjects();
-  styleProjectOnFocus(0);
-  setProjectText(0);
-  setProjectColors(0);
+async function selectProject(e) {
+  const indexToFocus = e.dataset.projectIndex;
+  if (indexToFocus == indexOnFocus) return;
+
+  focusTitle(indexToFocus);
+  styleProjectOnFocus(indexToFocus, e.dataset.projectColor);
+  setProjectText(indexToFocus);
+
+  const itemOnFocus = projectsImages[indexOnFocus];
+  const itemToFocus = projectsImages[indexToFocus];
+
+  itemOnFocus.classList.remove('mockup-container_selected', 'mockup-container_slide');
+  itemToFocus.classList.add('mockup-container_selected', 'mockup-container_slide');
+  setTimeout(() => itemToFocus.style.setProperty('z-index', z++), 500);
+  setTimeout(() => itemOnFocus.style.setProperty('transform', `rotate(${-2}deg)`), 900);
+
+  let rotationDegrees = -4;
+
+  for (let index = 0; index < projectsImages.length; index++) {
+    const image = projectsImages[index];
+    image.style.setProperty('transform', 'rotate(0)');
+    if (index == indexToFocus || index == indexOnFocus) continue;
+    setTimeout(() => {
+      image.style.setProperty('transform', `rotate(${rotationDegrees}deg)`)
+      rotationDegrees -= 2;
+    }, 900);
+  }
+
+  indexOnFocus = Number(indexToFocus);
+
 }
 
-function getProjects() {
-  return fetch(projectsPath)
-    .then(response => response.json())
-    .then(json => projects = json)
+function focusTitle(index) {
+  const titleElement = projectsTitles.children[index];
+  const currentlyFocusTitle = projectsTitles.getElementsByClassName('project-title project-title_selected')[0];
+  currentlyFocusTitle.classList.remove('project-title_selected');
+  projectsTitles.scrollTo({ top: index * 35, behavior: 'smooth' });
+  titleElement.classList.add('project-title_selected');
 }
+
+const titles = Array.from(projectsTitles.children);
+
+for (const i in titles) titles[i].addEventListener('click', (e) => selectProject(e.target));
+
+themeButton.addEventListener('click', changeTheme);
 
 function setProjectText(index) {
-  labelContainer.setAttribute('class', 'label-container label-container_mt label-container_faded')
-  description.setAttribute('class', 'project-description project-description_faded');
-  setTimeout(() => {
-    setLabels(index);
-    setLinks(index);
-    description.textContent = projects[index].description;
-    labelContainer.setAttribute('class', 'label-container label-container_mt');
-    description.setAttribute('class', 'project-description');
-  }, 200);
+  projectsTabs.classList.add('fade');
+  setLinks(index);
+  setPanels(index);
+  setTimeout(() => projectsTabs.classList.remove('fade'), 200);
 }
 
-function setLabels(index) {
-  while (labelContainer.firstChild) {
-    labelContainer.removeChild(labelContainer.firstChild);
-  }
-  for (const technology of projects[index].stack) {
-    const label = document.createElement('li');
-    label.appendChild(document.createTextNode(technology));
-    label.setAttribute('class', 'label');
-    labelContainer.appendChild(label);
+function setPanels(index) {
+  let firstPanelOpened = false;
+  for (const panel of expansionPanels.children) {
+    if (panel.getAttribute('open')) panel.setAttribute('open', false)
+    if (panel.dataset.projectIndex == index) {
+      panel.style.setProperty('display', 'block');
+      if (!firstPanelOpened) {
+        panel.setAttribute('open', true);
+        firstPanelOpened = true;
+      }
+    }
+    else panel.style.setProperty('display', 'none');
   }
 }
 
 function setLinks(index) {
-  while (linkContainer.firstChild) {
-    linkContainer.removeChild(linkContainer.firstChild);
-  }
-  for (const [linkKey, linkVal] of Object.entries(projects[index].links)) {
-    const anchor = document.createElement('a');
-    anchor.appendChild(document.createTextNode(linkKey));
-    anchor.setAttribute('class', 'link');
-    anchor.setAttribute('target', '_blank');
-    anchor.setAttribute('href', linkVal);
-    linkContainer.appendChild(anchor);
+  for (const child of linkContainer.children) {
+    if (child.dataset.projectIndex == index) child.style.setProperty('display', 'block');
+    else child.style.setProperty('display', 'none');
   }
 }
-
-function styleProjectOnFocus(index) {
-  titleContainer
-    .children[index].setAttribute('class', 'project-title project-title_selected');
-  imageContainer.children[index]
-    .setAttribute('class', 'project-images project-images_selected project-images_slide');
-}
-
-async function selectProject(i) {
-  if (i == indexOnFocus) return;
-  indexOnFocus = Number(i);
-  
-  focusTitle(indexOnFocus);
-  styleProjectOnFocus(indexOnFocus);
-  setProjectText(indexOnFocus);
-  setProjectColors(indexOnFocus);
-
-  await new Promise((resolve, reject) => {
-    setTimeout(() => {
-      imageContainer.children[indexOnFocus]
-        .setAttribute('style', `z-index: ${imageContainer.children.length};`);
-      resolve();
-    }, 500)
-  });
-
-  for (const item of imageContainer.children) {
-    const index = Number(item.dataset.projectIndex);
-    if (index === indexOnFocus) continue;
-
-    const stackPosition = (index < indexOnFocus) ? projects.length - (indexOnFocus - index) : projects.length - (index - indexOnFocus);
-    const rotationAngle = (index - indexOnFocus) * 5;
-    const translationX = (index - indexOnFocus) * 25;
-    const timeOut = (index < indexOnFocus) ? 400 : 100;
-
-    item.setAttribute('class', 'project-images');
-
-    new Promise((resolve, reject) => setTimeout(() => {
-      item.setAttribute('style', `z-index: ${stackPosition}; transform: rotate(${rotationAngle}deg) translate(${translationX}px);`);
-      resolve();
-    }, timeOut));
-  }
-}
-
-function focusTitle(index) {
-  const titleElement = titleContainer.children[index];
-  const currentlyFocusTitle = titleContainer.getElementsByClassName('project-title project-title_selected')[0]
-  currentlyFocusTitle.setAttribute('class', 'project-title');
-  currentlyFocusTitle.removeAttribute('style');
-  titleContainer.scrollTo({ top: index * 35, behavior: 'smooth' });
-  titleElement.setAttribute('class', 'project-title project-title_selected');
-}
-
-function setProjectColors(i) {
-  const projectMainColor = projects[i].mainColor;
-  const projectThemeIsDark = projects[i].isDark;
-  const projectSecondaryColor = projects[i].secondaryColor;
-  const body = document.querySelector('body');
-  body.style.setProperty('--projects-color', projectThemeIsDark ? '#fff' : '#111');
-  body.style.setProperty('--projects-bg', projectMainColor);
-  body.style.setProperty('--projects-accent', projectSecondaryColor);
-}
-
-function changeTheme() {
-  const body = document.getElementById('body');
-  const themeButton = document.getElementById('theme-button');
-  const themeIsLight = body.style.getPropertyValue('--bg-color') === '#fff';
-
-  if (themeIsLight) {
-    body.style.setProperty('--bg-color', '#191919');
-    body.style.setProperty('--font-color', '#fff');
-    themeButton.setAttribute('class', 'theme-button theme-button_dark')
-  } else {
-    body.style.setProperty('--bg-color', '#fff');
-    body.style.setProperty('--font-color', '#191919');
-    themeButton.setAttribute('class', 'theme-button');
-  }
-}
-
-setProjects();
