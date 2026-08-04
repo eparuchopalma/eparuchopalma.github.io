@@ -10,15 +10,12 @@
   <meta property="og:description" content="Explora mi trabajo enfocado en alto rendimiento y diseños elegantes, conoce parte de mi historia">
   <meta property="og:image" content="https://github.com/eparuchopalma/eparuchopalma.github.io/blob/main/assets/preview.jpg?raw=true">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <title>Edgar Parucho Palma</title>
 </head>
 <body id="body" class="body body_dark">
   <main class="main">
 
-    <button id="theme-button" class="theme-button theme-button_dark"></button>
+    <button id="theme-button" class="theme-button theme-button_dark" aria-label="tema" title="Tema"></button>
 
     <header class="header">
       <h1 class="headline">
@@ -36,11 +33,11 @@
         <a class="language-link" href="./index_en.html">English version here</a>
       </div>
       <picture class="picture-container picture-container_animate">
-        <source media="(min-width: 650px)" srcset="assets/author_lg.webp">
-        <source media="(min-width: 465px)" srcset="assets/author_md.webp">
+        <source media="(max-width: 950px) and (orientation: landscape)" srcset="assets/author_sm.webp">
+        <source media="(min-width: 576px)" srcset="assets/author_lg.webp">
         <img
         src="assets/author_sm.webp"
-        alt="Retrato en blanco y negro del autor: luce piel blanca, cabello corto de color oscuro, usa franela oscura, jeans y las manos en los bolsillos."
+        alt="Retrato en blanco y negro del autor: de piel blanca, cabello corto, oscuro, usa franela oscura, jeans y las manos en los bolsillos."
         class="picture picture_position-top">
       </picture>
     </header>

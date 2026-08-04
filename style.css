@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("./assets/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 400 600;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("./assets/fonts/PlayfairDisplay-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root {
   --light: #fff;
   --dark: #191919;
@@ -159,7 +172,7 @@ img {
   margin: 12px;
   display: inline-block;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: box-shadow .5s;
   animation-duration: .5s;
