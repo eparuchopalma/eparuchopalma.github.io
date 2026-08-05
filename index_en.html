@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Website of Edgar Parucho, web developer specialized in Vue.js and Node.js with a front-end focus">
+  <meta name="description" content="Edgar Parucho — web developer focused on high performance and elegant UI.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://eparuchopalma.github.io/">
   <meta property="og:title" content="Edgar Parucho | Web Developer">
   <meta property="og:description" content="Explore my work focused on high performance and elegant designs, and learn more about my story">
   <meta property="og:image" content="https://github.com/eparuchopalma/eparuchopalma.github.io/blob/main/assets/preview.jpg?raw=true">
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <title>Edgar Parucho Palma</title>
 </head>
-<body id="body" class="body">
+<body id="body" class="body body_dark">
   <main class="main">
 
-    <button id="theme-button" class="theme-button theme-button_dark"></button>
+    <button id="theme-button" class="theme-button theme-button_dark" aria-label="theme" title="Theme"></button>
 
     <header class="header">
       <h1 class="headline">
@@ -26,31 +23,31 @@
         PARUCHO
         <span class="headline__label headline__label_right">PALMA</span>
       </h1>
-      <strong class="subtitle">Front-End Developer</strong>
+      <strong class="subtitle subtitle_animated">Full Stack Developer</strong>
       <p class="header__paragraph">I build
-        <strong>high-performance, visually striking</strong> websites and web applications.
+        <strong>high-performance, visually attractive</strong> websites and web applications.
       </p>
       <div class="cta-container">
         <a class="cta cta_secondary" href="#projects">Projects</a>
-        <a class="cta cta_primary" href="#contact">Contact Info</a>
+        <a class="cta cta_primary" href="#contact">Contact</a>
+        <a class="language-link" href="./index.html">View Spanish version</a>
       </div>
-      <a class="lang-link" href="./index.html">Ir a la version en español</a>
-      <picture class="picture-container">
-        <source media="(min-width: 650px)" srcset="assets/author_lg.webp">
-        <source media="(min-width: 465px)" srcset="assets/author_md.webp">
+      <picture class="picture-container picture-container_animate">
+        <source media="(max-width: 950px) and (orientation: landscape)" srcset="assets/author_sm.webp">
+        <source media="(min-width: 576px)" srcset="assets/author_lg.webp">
         <img
         src="assets/author_sm.webp"
-        alt="A black-and-white portrait of a man in a t-shirt and jeans with his hands in his pockets, looking to the side, against a brick wall"
-        class="picture">
+        alt="Black-and-white portrait of the author with short dark hair, wearing a dark t-shirt and jeans, hands in pockets."
+        class="picture picture_position-top">
       </picture>
     </header>
 
-    <section class="section" style="--project-primary: #41B883;">
+    <section class="section section_grid" style="--project-color: #41B883;">
       <div class="title-container">
         <h2 class="section__title">Mantra</h2>
         <p class="section__subtitle">Help Desk app<br>Microfilms Center</p>
       </div>
-      <div class="section__container section__container_lg">
+      <div class="section__container">
         <div class="carousel">
           <div class="carousel-dots">
             <span class="dot active"></span>
@@ -61,97 +58,53 @@
           <button class="carousel-btn btn-next" aria-label="Next">&#10095;</button>
           <div class="carousel__track">
             <div class="carousel__item">
-              <img
-              class="project-image project-image_mobile"
-              src="assets/mantra_mobile_1.webp"
-              alt="Mantra mobile view">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_1.webp">
-                <img
-                src="assets/mantra_mobile_4.webp"
-                alt="Mantra desktop view">
-              </picture>
+              <img class="mockup mockup_mobile" src="assets/mantra_mobile_1.webp" alt="Mantra mobile: management cards with indicators (Solved, SLA)">
+              <img class="mockup mockup_desktop" src="assets/mantra_desktop_1.webp" alt="Mantra desktop: dashboard with charts">
             </div>
             <div class="carousel__item">
-              <img
-              class="project-image project-image_mobile"
-              src="assets/mantra_mobile_2.webp"
-              alt="Mantra mobile view">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_2.webp">
-                <img
-                src="assets/mantra_mobile_5.webp"
-                alt="Mantra desktop view">
-              </picture>
+              <img class="mockup mockup_mobile" src="assets/mantra_mobile_2.webp" alt="Mantra mobile: dashboard with charts">
+              <img class="mockup mockup_desktop" src="assets/mantra_desktop_2.webp" alt="Mantra desktop: client and technician charts">
             </div>
             <div class="carousel__item">
-              <img
-              class="project-image project-image_mobile"
-              src="assets/mantra_mobile_3.webp"
-              alt="Mantra mobile view">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/mantra_desktop_1.webp">
-                <img
-                src="assets/mantra_mobile_6.webp"
-                alt="Mantra desktop view">
-              </picture>
+              <img class="mockup mockup_mobile" src="assets/mantra_mobile_3.webp" alt="Mantra mobile: query results by product and status">
+              <img class="mockup mockup_desktop" src="assets/mantra_desktop_3.webp" alt="Mantra desktop: query interface with form controls">
             </div>
           </div>
         </div>
       </div>
-      <div class="section__container section__container_sm">
-        <div class="tabs-container">
+      <div class="section__container">
+        <div class="tabs-container tabs-container_h-full">
           <input type="radio" id="tab1" name="tab-group" checked>
-          <label for="tab1" class="tab-label">Overview</label>
+          <label for="tab1" class="tab-label">Impact</label>
           <div class="tab-content">
             <div class="expansion-panels">
-              <details class="expansion-panel" name="features">
-                <summary>
-                  <span>Full-Stack Architecture</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">
-                  Designed and built from scratch with an interface and features focused on purpose.
-                </div>
-              </details>
-
-              <details class="expansion-panel" name="features">
-                <summary>
-                  <span>Progressive Web App (PWA)</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">
-                  Provides fast access, installability and a smooth experience.
-                </div>
-              </details>
-
-              <details class="expansion-panel" name="features">
-                <summary>
-                  <span>Digital Transformation</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">
-                  Replaced outdated workflows and centralized operations across departments.
-                </div>
-              </details>
-
               <details class="expansion-panel" name="features" open>
                 <summary>
-                  <span>Financial and Commercial Impact</span>
+                  <span>Financial impact</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
-                  Greatly reduced organizational costs and proved stability enabling commercialization.
+                  <strong>Significantly reduced organizational costs</strong> and demonstrated long-term stability that enabled commercialization.
                 </div>
               </details>
 
               <details class="expansion-panel" name="features">
                 <summary>
-                  <span>Security and Operational Centralization</span>
+                  <span>Results</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
-                  Consolidated data consistency and provided remote access for working teams.
+                  <strong>Centralizes critical processes</strong> improving data consistency, team communication, error margin, and handling times.
+                </div>
+              </details>
+
+              <details class="expansion-panel" name="features">
+                <summary>
+                  <span>Team collaboration</span>
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </summary>
+                <div class="content">
+                  <p>Enabled multi-department integration and remote access to the main management tool.</p>
                 </div>
               </details>
             </div>
@@ -208,177 +161,74 @@
       </div>
     </section>
 
-    <section class="section" style="--project-primary: #BC5536;">
+    <section id="projects" class="section section_grid" style="--project-color: #BC5536;">
       <div class="title-container">
-        <h2 class="section__title">Luthen</h2>
-        <p class="section__subtitle">Financial log</p>
+        <h2 class="section__title">Projects</h2>
+        <p class="section__subtitle">Side projects</p>
       </div>
-      <div class="section__container section__container_lg">
-        <div class="carousel">
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-          </div>
-          <button class="carousel-btn btn-prev" aria-label="Previous">&#10094;</button>
-          <button class="carousel-btn btn-next" aria-label="Next">&#10095;</button>
-          <div class="carousel__track">
-            <div class="carousel__item">
-              <img class="project-image project-image_mobile" src="assets/luthen_mobile.png" alt="Luthen mobile view">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/luthen_desktop.png">
-                <img src="assets/luthen_mobile.png" alt="Luthen desktop view">
-              </picture>
-            </div>
-          </div>
+      <div id="projects-images" class="section__container section__container_relative section__container_sm">
+        <div class="mockup-container mockup-container_selected" data-project-index="0" data-project-color="#BC5536" style="z-index: 3;">
+          <img class="mockup mockup_mobile" src="assets/luthen_mobile_1.webp" alt="Luthen mobile view: login screen">
+          <img class="mockup mockup_desktop" src="assets/luthen_desktop_1.webp" alt="Luthen desktop view: charts and tables">
+        </div>
+        <div class="mockup-container" data-project-index="1" data-project-color="#202020" style="transform: rotate(-2deg); z-index: 2;">
+          <img class="mockup mockup_mobile" src="assets/lighthouse_mobile.webp" alt="Lighthouse mobile: habits radar chart">
+          <img class="mockup mockup_desktop" src="assets/lighthouse_desktop.webp" alt="Lighthouse desktop: records table and radar chart">
+        </div>
+        <div class="mockup-container" data-project-index="2" data-project-color="#3de" style="transform: rotate(-4deg); z-index: 1;">
+          <img class="mockup mockup_mobile" src="assets/pensive_mobile.webp" alt="Pensive mobile: registration form">
+          <img class="mockup mockup_desktop" src="assets/pensive_desktop.webp" alt="Pensive desktop: registration form reference">
         </div>
       </div>
-      <div class="section__container section__container_sm">
-        <div class="tabs-container">
-          <input type="radio" id="luthen-tab1" name="luthen-tabs" checked>
-          <label for="luthen-tab1" class="tab-label">Overview</label>
+
+      <div class="section__container section__container_lg">
+        <ul id="projects-titles" class="projects-titles">
+          <li class="project-title project-title_selected" data-project-index="0" data-project-color="#BC5536">
+            Luthen
+          </li>
+          <li class="project-title" data-project-index="1" data-project-color="#202020">
+            Lighthouse
+          </li>
+          <li class="project-title" data-project-index="2" data-project-color="#3de">
+            Pensive
+          </li>
+        </ul>
+        <div id="projects-tabs" class="tabs-container">
+          <input type="radio" id="project-tab1" name="projects-tabs" checked>
+          <label for="project-tab1" class="tab-label">Stack</label>
           <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" open>
-                <summary>
-                  <span>Full-Stack Architecture</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Designed and built from scratch with an interface and features focused on purpose.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Progressive Web App (PWA)</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Provides fast access, installability and a smooth experience.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Digital Transformation</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Replaced outdated workflows and centralized operations across departments.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Financial and Commercial Impact</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Greatly reduced organizational costs and proved stability enabling commercialization.</div>
-              </details>
-            </div>
-          </div>
-          <input type="radio" id="luthen-tab2" name="luthen-tabs">
-          <label for="luthen-tab2" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" open>
+            <div id="expansion-panels" class="expansion-panels">
+              <details class="expansion-panel" name="projects-tech" open data-project-index="0">
                 <summary>
                   <span>Front-End</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <ul>
-                    <li>TypeScript</li>
-                    <li>Vue.js</li>
-                    <li>Vue Router</li>
+                    <li>Vue.js (v3)</li>
+                    <li>Composition API</li>
                     <li>Vite</li>
+                    <li>Plain CSS - BEM architecture</li>
+                    <li>Chart.js</li>
                   </ul>
                 </div>
               </details>
-              <details class="expansion-panel">
+
+              <details class="expansion-panel" name="projects-tech" data-project-index="0">
                 <summary>
                   <span>Back-End and Database</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <ul>
-                    <li>TypeScript</li>
                     <li>Node.js</li>
                     <li>Express.js</li>
-                    <li>PostgreSQL</li>
-                    <li>Sequelize</li>
+                    <li>REST API</li>
                   </ul>
                 </div>
               </details>
-            </div>
-          </div>
-          <input type="radio" id="luthen-tab3" name="luthen-tabs">
-          <label for="luthen-tab3" class="tab-label">Links</label>
-          <div class="tab-content">
-            <ul>
-              <li><a href="https://luthen.vercel.app" class="link link_vercel" target="_blank">Demo</a></li>
-              <li><a href="https://github.com/eparuchopalma/luthen-ui" class="link link_github" target="_blank">Front-End Repository</a></li>
-              <li><a href="https://github.com/eparuchopalma/luthen-api" class="link link_github" target="_blank">Back-End Repository</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" style="--project-primary: #F1F1F1;">
-      <div class="title-container">
-        <h2 class="section__title">Lighthouse</h2>
-        <p class="section__subtitle">Habit tracker</p>
-      </div>
-      <div class="section__container section__container_lg">
-        <div class="carousel">
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-          </div>
-          <button class="carousel-btn btn-prev" aria-label="Previous">&#10094;</button>
-          <button class="carousel-btn btn-next" aria-label="Next">&#10095;</button>
-          <div class="carousel__track">
-            <div class="carousel__item">
-              <img class="project-image project-image_mobile" src="assets/lighthouse_mobile.png" alt="Lighthouse mobile view">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/lighthouse_desktop.png">
-                <img src="assets/lighthouse_mobile.png" alt="Lighthouse desktop view">
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section__container section__container_sm">
-        <div class="tabs-container">
-          <input type="radio" id="lighthouse-tab1" name="lighthouse-tabs" checked>
-          <label for="lighthouse-tab1" class="tab-label">Overview</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" open>
-                <summary>
-                  <span>Full-Stack Architecture</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Designed and built from scratch with an interface and features focused on purpose.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Progressive Web App (PWA)</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Provides fast access, installability and a smooth experience.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Digital Transformation</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Replaced outdated workflows and centralized operations across departments.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Financial and Commercial Impact</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Greatly reduced organizational costs and proved stability enabling commercialization.</div>
-              </details>
-            </div>
-          </div>
-          <input type="radio" id="lighthouse-tab2" name="lighthouse-tabs">
-          <label for="lighthouse-tab2" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" open>
+              <details class="expansion-panel" name="projects-tech" data-project-index="1" style="display: none;">
                 <summary>
                   <span>Front-End</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -387,11 +237,13 @@
                   <ul>
                     <li>React.js</li>
                     <li>Vite</li>
-                    <li>CSS</li>
+                    <li>Plain CSS - BEM architecture</li>
+                    <li>Chart.js</li>
                   </ul>
                 </div>
               </details>
-              <details class="expansion-panel">
+
+              <details class="expansion-panel" name="projects-tech" data-project-index="1" style="display: none;">
                 <summary>
                   <span>Back-End and Database</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -400,175 +252,99 @@
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
-                    <li>PostgreSQL</li>
+                    <li>REST API</li>
                     <li>Sequelize</li>
-                    <li>Docker</li>
                   </ul>
                 </div>
               </details>
-            </div>
-          </div>
-          <input type="radio" id="lighthouse-tab3" name="lighthouse-tabs">
-          <label for="lighthouse-tab3" class="tab-label">Links</label>
-          <div class="tab-content">
-            <ul>
-              <li><a href="https://lighthouse-drab-eight.vercel.app/" class="link link_vercel" target="_blank">Demo</a></li>
-              <li><a href="https://github.com/eparuchopalma/lighthouse-ui" class="link link_github" target="_blank">Front-End Repository</a></li>
-              <li><a href="https://github.com/eparuchopalma/lighthouse-api" class="link link_github" target="_blank">Back-End Repository</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <section class="section" style="--project-primary: #081919;">
-      <div class="title-container">
-        <h2 class="section__title">Pensive</h2>
-        <p class="section__subtitle">Notebook</p>
-      </div>
-      <div class="section__container section__container_lg">
-        <div class="carousel">
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-          </div>
-          <button class="carousel-btn btn-prev" aria-label="Previous">&#10094;</button>
-          <button class="carousel-btn btn-next" aria-label="Next">&#10095;</button>
-          <div class="carousel__track">
-            <div class="carousel__item">
-              <img class="project-image project-image_mobile" src="assets/pensive_mobile.png" alt="Pensive mobile view">
-              <picture class="project-image project-image_desktop">
-                <source media="(min-width: 576px)" srcset="assets/pensive_desktop.png">
-                <img src="assets/pensive_mobile.png" alt="Pensive desktop view">
-              </picture>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section__container section__container_sm">
-        <div class="tabs-container">
-          <input type="radio" id="pensive-tab1" name="pensive-tabs" checked>
-          <label for="pensive-tab1" class="tab-label">Overview</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" open>
-                <summary>
-                  <span>Full-Stack Architecture</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Designed and built from scratch with an interface and features focused on purpose.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Progressive Web App (PWA)</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Provides fast access, installability and a smooth experience.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Digital Transformation</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Replaced outdated workflows and centralized operations across departments.</div>
-              </details>
-              <details class="expansion-panel">
-                <summary>
-                  <span>Financial and Commercial Impact</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </summary>
-                <div class="content">Greatly reduced organizational costs and proved stability enabling commercialization.</div>
-              </details>
-            </div>
-          </div>
-          <input type="radio" id="pensive-tab2" name="pensive-tabs">
-          <label for="pensive-tab2" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" open>
+              <details class="expansion-panel" name="projects-tech" data-project-index="2" style="display: none;">
                 <summary>
                   <span>Front-End</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <ul>
-                    <li>TypeScript</li>
-                    <li>Vue.js</li>
-                    <li>Vue Router</li>
+                    <li>Vue.js (v3)</li>
+                    <li>Composition API</li>
+                    <li>Vite</li>
+                    <li>Plain CSS - BEM architecture</li>
+                    <li>Chart.js</li>
                   </ul>
                 </div>
               </details>
-              <details class="expansion-panel">
+
+              <details class="expansion-panel" name="projects-tech" data-project-index="2" style="display: none;">
                 <summary>
                   <span>Back-End and Database</span>
                   <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
                 <div class="content">
                   <ul>
-                    <li>TypeScript</li>
                     <li>Node.js</li>
                     <li>Express.js</li>
-                    <li>PostgreSQL</li>
-                    <li>Sequelize</li>
-                    <li>Docker</li>
+                    <li>MongoDB</li>
+                    <li>REST API</li>
+                    <li>JWT</li>
                   </ul>
                 </div>
               </details>
+
             </div>
           </div>
-          <input type="radio" id="pensive-tab3" name="pensive-tabs">
-          <label for="pensive-tab3" class="tab-label">Links</label>
+
+          <input type="radio" id="project-tab2" name="projects-tabs">
+          <label for="project-tab2" class="tab-label">Links</label>
           <div class="tab-content">
-            <ul>
-              <li><a href="https://pensive-epp.vercel.app/" class="link link_vercel" target="_blank">Demo</a></li>
-              <li><a href="https://github.com/eparuchopalma/pensive-ui/" class="link link_github" target="_blank">Front-End Repository</a></li>
-              <li><a href="https://github.com/eparuchopalma/pensive-api" class="link link_github" target="_blank">Back-End Repository</a></li>
+            <ul id="link-container">
+              <li data-project-index="0">
+                <a target="_blank" href="https://github.com/eparuchopalma/luthen-ui.git" class="link link_github">Front-End Code</a>
+              </li>
+              <li data-project-index="0">
+                <a target="_blank" href="https://github.com/eparuchopalma/luthen-api.git" class="link link_github">Back-End Code</a>
+              </li>
+              <li data-project-index="0">
+                <a target="_blank" href="https://luthen.vercel.app/" class="link link_vercel">Demo</a>
+              </li>
+              <li data-project-index="1" style="display: none;">
+                <a target="_blank" href="https://github.com/eparuchopalma/lighthouse-ui.git" class="link link_github">Front-End Code</a>
+              </li>
+              <li data-project-index="1" style="display: none;">
+                <a target="_blank" href="https://github.com/eparuchopalma/lighthouse-api.git" class="link link_github">Back-End Code</a>
+              </li>
+              <li data-project-index="1" style="display: none;">
+                <a target="_blank" href="https://lighthouse-drab-eight.vercel.app/" class="link link_vercel">Demo</a>
+              </li>
+              <li data-project-index="2" style="display: none;">
+                <a target="_blank" href="https://github.com/eparuchopalma/pensive-ui.git" class="link link_github">Front-End Code</a>
+              </li>
+              <li data-project-index="2" style="display: none;">
+                <a target="_blank" href="https://github.com/eparuchopalma/pensive-api.git" class="link link_github">Back-End Code</a>
+              </li>
+              <li data-project-index="2" style="display: none;">
+                <a target="_blank" href="https://pensive-epp.vercel.app/" class="link link_github">Demo</a>
+              </li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <h2 class="section__title">About Me</h2>
-      <div class="section__first-pt">
-        <picture class="picture-container">
-          <source media="(min-width: 576px)" srcset="assets/setup_portrait.webp">
-          <img
-          src="assets/setup_landscape.png"
-          alt="A home office setup featuring a laptop displaying code, a row of books, a notebook, and a framed family photo on a wooden desk"
-          class="picture">
-        </picture>
-      </div>
-      <div class="section__second-pt">
-        <p>I am a front-end developer driven by robust engineering and high-end UI/UX design. For me, development is about crafting unique experiences that reject the average and stand out.</p>
-        <br>
-        <p>My primary toolkit centers on <strong>Vue.js, TypeScript, and CSS</strong>, backed by full-stack experience in <strong>Node.js, Express, and databases (SQL/NoSQL)</strong>. This allows me to build front-ends that integrate seamlessly with complex back-ends.  As a lifelong learner, I also continuously optimize my workflow by integrating modern AI tools.</p>
-        <br>
-        <p>Beyond code, my foundation is built on the deep discipline and project management skills I’ve polished over the last few years dedicating myself to my home and family. I am seeking remote opportunities where this work ethic and commitment to quality can drive impactful results. Offline, I’m usually weightlifting, reading, or playing board games with my wife and daughter.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="section section_column">
+    <section id="contact" class="section section_centered">
       <h2 class="section__title">Thank you</h2>
-      <br>
-      <p class="subtitle subtitle_sm">For your priceless time</p>
+      <p class="subtitle">For your invaluable time</p>
       <br>
       <p>
-        <strong>Add me to your network</strong>
-        so we can have the opportunity to collaborate.
+        <strong>Add me to your network</strong> so we can have the opportunity to collaborate.
       </p>
-      <div class="section__links">
-        <a class="section__link section__link_email" href="mailto:eparuchopalma@outlook.com" target="_blank">eparuchopalma@outlook.com</a>
-        <a class="section__link section__link_linkedin" href="https://www.linkedin.com/in/eparuchopalma/" target="_blank">linkedin.com/in/eparuchopalma</a>
-        <a class="section__link section__link_github" href="https://github.com/eparuchopalma" target="_blank">github.com/eparuchopalma</a>
-        <a class="section__link section__link_goodreads" href="https://www.goodreads.com/eparuchopalma" target="_blank">goodreads.com/eparuchopalma</a>
+      <div class="link-container">
+        <a class="link link_email" href="mailto:eparuchopalma@outlook.com" target="_blank">eparuchopalma@outlook.com</a>
+        <a class="link link_linkedin" href="https://www.linkedin.com/in/eparuchopalma/" target="_blank">linkedin.com/in/eparuchopalma</a>
+        <a class="link link_github" href="https://github.com/eparuchopalma" target="_blank">github.com/eparuchopalma</a>
+        <a class="link link_goodreads" href="https://www.goodreads.com/eparuchopalma" target="_blank">goodreads.com/eparuchopalma</a>
       </div>
     </section>
   </main>
-  <script>
-    const projectsPath = './json/projectsEN.json'
-  </script>
-  <script src="script.js">
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
