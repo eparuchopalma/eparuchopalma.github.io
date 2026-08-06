@@ -3,7 +3,7 @@ const projectsTitles = document.getElementById('projects-titles');
 const projectsSection = document.getElementById('projects');
 const projectsImages = document.getElementById('projects-images').children;
 const description = document.getElementById('project-description');
-const expansionPanels = document.getElementById('expansion-panels');
+const panelsContainer = document.getElementById('panels-container');
 const linkContainer = document.getElementById('link-container');
 const projectsTabs = document.getElementById('projects-tabs');
 const themeButton = document.getElementById('theme-button');
@@ -29,9 +29,9 @@ function changeTheme() {
 carousels.forEach((carousel) => {
   const track = carousel.querySelector('.carousel__track');
   const slides = carousel.querySelectorAll('.carousel__item');
-  const dots = carousel.querySelectorAll('.dot');
-  const btnPrev = carousel.querySelector('.btn-prev');
-  const btnNext = carousel.querySelector('.btn-next');
+  const dots = carousel.querySelectorAll('.carousel__dot');
+  const btnPrev = carousel.querySelector('.carousel__btn_prev');
+  const btnNext = carousel.querySelector('.carousel__btn_next');
 
   if (!track || !slides.length) return;
 
@@ -58,8 +58,8 @@ carousels.forEach((carousel) => {
       if (entry.isIntersecting) {
         const index = Number(entry.target.dataset.carouselIndex);
 
-        dots.forEach((dot) => dot.classList.remove('active'));
-        if (dots[index]) dots[index].classList.add('active');
+        dots.forEach((dot) => dot.classList.remove('carousel__dot_active'));
+        if (dots[index]) dots[index].classList.add('carousel__dot_active');
       }
     });
   }, observerOptions);
@@ -136,7 +136,7 @@ function setProjectText(index) {
 
 function setPanels(index) {
   let firstPanelOpened = false;
-  for (const panel of expansionPanels.children) {
+  for (const panel of panelsContainer.children) {
     if (panel.getAttribute('open')) panel.setAttribute('open', false)
     if (panel.dataset.projectIndex == index) {
       panel.style.setProperty('display', 'block');

@@ -32,30 +32,32 @@
         <a class="cta cta_primary" href="#contact">Contacto</a>
         <a class="language-link" href="./index_en.html">English version here</a>
       </div>
-      <picture class="picture-container picture-container_animate">
-        <source media="(max-width: 950px) and (orientation: landscape)" srcset="assets/author_sm.webp">
+      <picture class="picture">
         <source media="(min-width: 576px)" srcset="assets/author_lg.webp">
         <img
         src="assets/author_sm.webp"
-        alt="Retrato en blanco y negro del autor: de piel blanca, cabello corto, oscuro, usa franela oscura, jeans y las manos en los bolsillos."
-        class="picture picture_position-top">
+        alt="Retrato en blanco y negro del autor: de piel blanca, cabello corto, oscuro, usa franela oscura, jeans y las manos en los bolsillos.">
       </picture>
     </header>
 
     <section class="section section_grid" style="--project-color: #41B883;">
-      <div class="title-container">
+      <div class="section__header">
         <h2 class="section__title">Mantra</h2>
         <p class="section__subtitle">App de Help Desk<br>Microfilms Center</p>
       </div>
       <div class="section__container">
         <div class="carousel">
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div class="carousel__dots">
+            <span class="carousel__dot carousel__dot_active"></span>
+            <span class="carousel__dot"></span>
+            <span class="carousel__dot"></span>
           </div>
-          <button class="carousel-btn btn-prev" aria-label="Anterior">&#10094;</button>
-          <button class="carousel-btn btn-next" aria-label="Siguiente">&#10095;</button>
+          <button class="carousel__btn carousel__btn_prev" aria-label="Anterior">
+            &#10094;
+          </button>
+          <button class="carousel__btn carousel__btn_next" aria-label="Siguiente">
+            &#10095;
+          </button>
           <div class="carousel__track">
             <div class="carousel__item">
               <img
@@ -91,52 +93,52 @@
         </div>
       </div>
       <div class="section__container">
-        <div class="tabs-container tabs-container_h-full">
-          <input type="radio" id="tab1" name="tab-group" checked>
-          <label for="tab1" class="tab-label">Impacto</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" name="features" open>
-                <summary>
+        <div class="tabs tabs_h-full">
+          <input class="tabs__field" type="radio" id="tab1" name="tab-group" checked>
+          <label for="tab1" class="tabs__label">Impacto</label>
+          <div class="tabs__content">
+            <div class="panels-container">
+              <details class="panel" name="features" open>
+                <summary class="panel__title">
                   <span>Impacto financiero</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <p><strong>Redujo drásticamente costos</strong> en recursos de la organización y demostró una estabilidad a largo plazo que <strong>permitió su comercialización</strong>.</p>
                 </div>
               </details>
 
-              <details class="expansion-panel" name="features">
-                <summary>
+              <details class="panel" name="features">
+                <summary class="panel__title">
                   <span>Resultados</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <strong>Centraliza procesos críticos</strong> lo que mejora la consistencia de la información, la comunicación del equipo, el margen de error y tiempos de gestión.
                 </div>
               </details>
 
-              <details class="expansion-panel" name="features">
-                <summary>
+              <details class="panel" name="features">
+                <summary class="panel__title">
                   <span>Trabajo en equipo</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <p>Permitió por primera vez la integración multidepartamental y el acceso remoto a la principal herramienta de gestión y fuente de la verdad.</p>
                 </div>
               </details>
             </div>
           </div>
-          <input type="radio" id="tab2" name="tab-group">
-          <label for="tab2" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" name="tech" open>
-                <summary>
+          <input class="tabs__field" type="radio" id="tab2" name="tab-group">
+          <label for="tab2" class="tabs__label">Stack</label>
+          <div class="tabs__content">
+            <div class="panels-container">
+              <details class="panel" name="tech" open>
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul id="stack-container">
                     <li>Vue.js &lpar;v2&rpar;</li>
                     <li>Vuetify</li>
@@ -150,12 +152,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="tech">
-                <summary>
+              <details class="panel" name="tech">
+                <summary class="panel__title">
                   <span>Back-End y Base de Datos</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -170,9 +172,9 @@
             </div>
           </div>
 
-          <input type="radio" id="tab3" name="tab-group">
-          <label for="tab3" class="tab-label">Enlaces</label>
-          <div class="tab-content">
+          <input class="tabs__field" type="radio" id="tab3" name="tab-group">
+          <label for="tab3" class="tabs__label">Enlaces</label>
+          <div class="tabs__content">
             <p class="alert">Ahora pertenece a Microfilms Center</p>
           </div>
         </div>
@@ -180,7 +182,7 @@
     </section>
 
     <section id="projects" class="section section_grid" style="--project-color: #BC5536;">
-      <div class="title-container">
+      <div class="section__header">
         <h2 class="section__title">Proyectos</h2>
         <p class="section__subtitle">
           Secundarios
@@ -213,17 +215,17 @@
             Pensive
           </li>
         </ul>
-        <div id="projects-tabs" class="tabs-container">
-          <input type="radio" id="project-tab1" name="projects-tabs" checked>
-          <label for="project-tab1" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div id="expansion-panels" class="expansion-panels">
-              <details class="expansion-panel" name="projects-tech" open data-project-index="0">
-                <summary>
+        <div id="projects-tabs" class="tabs">
+          <input class="tabs__field" type="radio" id="project-tab1" name="projects-tabs" checked>
+          <label for="project-tab1" class="tabs__label">Stack</label>
+          <div class="tabs__content">
+            <div id="panels-container" class="panels-container">
+              <details class="panel" name="projects-tech" open data-project-index="0">
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Vue.js &lpar;v3&rpar;</li>
                     <li>Composition API</li>
@@ -234,12 +236,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="0">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="0">
+                <summary class="panel__title">
                   <span>Back-End y Base de Datos</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -248,12 +250,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="1" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="1" style="display: none;">
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>React.js</li>
                     <li>Vite</li>
@@ -263,12 +265,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="1" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="1" style="display: none;">
+                <summary class="panel__title">
                   <span>Back-End y Base de Datos</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -278,12 +280,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="2" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="2" style="display: none;">
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Vue.js &lpar;v3&rpar;</li>
                     <li>Composition API</li>
@@ -294,12 +296,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="2" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="2" style="display: none;">
+                <summary class="panel__title">
                   <span>Back-End y Base de Datos</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -313,9 +315,9 @@
             </div>
           </div>
 
-          <input type="radio" id="project-tab2" name="projects-tabs">
-          <label for="project-tab2" class="tab-label">Enlaces</label>
-          <div class="tab-content">
+          <input class="tabs__field" type="radio" id="project-tab2" name="projects-tabs">
+          <label for="project-tab2" class="tabs__label">Enlaces</label>
+          <div class="tabs__content">
             <ul id="link-container">
               <li data-project-index="0">
                 <a target="_blank" href="https://github.com/eparuchopalma/luthen-ui.git" class="link link_github">Código - Front-End</a>
