@@ -141,7 +141,7 @@ img {
   border-radius: 2px;
   text-align: center;
   font-weight: 500;
-  font-size: 2.4rem;
+  font-size: 2rem;
   box-shadow: 6px 6px var(--font-color);
 }
 
@@ -480,7 +480,8 @@ img {
 
 .link {
   height: 48px;
-  margin: 8px auto;
+  min-width: 340px;
+  margin: 6px auto;
   border-radius: 2px;
   padding-left: 36px;
   display: flex;
@@ -602,6 +603,19 @@ img {
   .mockup_desktop { display: none; }
   .link { min-width: 420px; }
 
+  .header {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .picture {
+    margin: 12px 0 0 12px;
+    align-self: center;
+    max-height: 90vh;
+    grid-row: 1 / 5;
+    aspect-ratio: 3 / 4;
+  }
+
   .section_grid {
     display: grid;
     align-items: start;
@@ -628,6 +642,10 @@ img {
   .tabs__label {
     order: 0;
     width: 32%;
+  }
+
+  .section_centered {
+    gap: 0;
   }
 
 }
@@ -677,15 +695,13 @@ img {
 
 @media (any-hover: hover) {
 
+  a:hover { text-decoration: underline; }
+
   .theme-button:hover { transform: scale(1.2) rotate(45deg); }
 
-  .cta:hover, .cta:focus { box-shadow: 12px 12px #444; }
+  .cta:hover, .cta:focus { box-shadow: 12px 12px var(--accent); }
 
-  .cta_secondary:hover, .cta_secondary:focus { box-shadow: -12px 12px #444; }
-
-  .language-link:hover { text-decoration: underline; }
-  
-  .link:hover { text-decoration: underline; }
+  .cta_secondary:hover, .cta_secondary:focus { box-shadow: -12px 12px var(--accent); }
 
   .link:hover::after { transform: scale(1.2); }
 

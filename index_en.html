@@ -15,7 +15,7 @@
 <body id="body" class="body body_dark">
   <main class="main">
 
-    <button id="theme-button" class="theme-button theme-button_dark" aria-label="theme" title="Theme"></button>
+    <button id="theme-button" class="theme-button theme-button_dark" aria-label="tema" title="Tema"></button>
 
     <header class="header">
       <h1 class="headline">
@@ -32,7 +32,7 @@
         <a class="cta cta_primary" href="#contact">Contact</a>
         <a class="language-link" href="./index.html">View Spanish version</a>
       </div>
-      <picture class="picture picture_animate">
+      <picture class="picture">
         <source media="(min-width: 576px)" srcset="assets/img/author.webp">
         <img
         src="assets/img/author_sm.webp"
@@ -41,82 +41,82 @@
     </header>
 
     <section class="section section_grid" style="--project-color: #41B883;">
-      <div class="title-container">
+      <div class="section__header">
         <h2 class="section__title">Mantra</h2>
         <p class="section__subtitle">Help Desk app<br>Microfilms Center</p>
       </div>
       <div class="section__container">
         <div class="carousel">
-          <div class="carousel-dots">
-            <span class="dot active"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
+          <div class="carousel__dots">
+            <span class="carousel__dot carousel__dot_active"></span>
+            <span class="carousel__dot"></span>
+            <span class="carousel__dot"></span>
           </div>
-          <button class="carousel-btn btn-prev" aria-label="Previous">&#10094;</button>
-          <button class="carousel-btn btn-next" aria-label="Next">&#10095;</button>
+          <button class="carousel__btn carousel__btn_prev" aria-label="Anterior">&#10094;</button>
+          <button class="carousel__btn carousel__btn_next" aria-label="Siguiente">&#10095;</button>
           <div class="carousel__track">
             <div class="carousel__item">
-              <img class="mockup mockup_mobile" src="assets/mantra_mobile_1.webp" alt="Mantra mobile: management cards with indicators (Solved, SLA)">
-              <img class="mockup mockup_desktop" src="assets/mantra_desktop_1.webp" alt="Mantra desktop: dashboard with charts">
+              <img class="mockup mockup_mobile" src="assets/img/projects/mantra_mobile_1.webp" alt="Mantra mobile: management cards with indicators (Solved, SLA)">
+              <img class="mockup mockup_desktop" src="assets/img/projects/mantra_desktop_1.webp" alt="Mantra desktop: dashboard with charts">
             </div>
             <div class="carousel__item">
-              <img class="mockup mockup_mobile" src="assets/mantra_mobile_2.webp" alt="Mantra mobile: dashboard with charts">
-              <img class="mockup mockup_desktop" src="assets/mantra_desktop_2.webp" alt="Mantra desktop: client and technician charts">
+              <img class="mockup mockup_mobile" src="assets/img/projects/mantra_mobile_2.webp" alt="Mantra mobile: dashboard with charts">
+              <img class="mockup mockup_desktop" src="assets/img/projects/mantra_desktop_2.webp" alt="Mantra desktop: client and technician charts">
             </div>
             <div class="carousel__item">
-              <img class="mockup mockup_mobile" src="assets/mantra_mobile_3.webp" alt="Mantra mobile: query results by product and status">
-              <img class="mockup mockup_desktop" src="assets/mantra_desktop_3.webp" alt="Mantra desktop: query interface with form controls">
+              <img class="mockup mockup_mobile" src="assets/img/projects/mantra_mobile_3.webp" alt="Mantra mobile: query results by product and status">
+              <img class="mockup mockup_desktop" src="assets/img/projects/mantra_desktop_3.webp" alt="Mantra desktop: query interface with form controls">
             </div>
           </div>
         </div>
       </div>
       <div class="section__container">
-        <div class="tabs-container tabs-container_h-full">
-          <input type="radio" id="tab1" name="tab-group" checked>
-          <label for="tab1" class="tab-label">Impact</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" name="features" open>
-                <summary>
+        <div class="tabs tabs_h-full">
+          <input class="tabs__field" type="radio" id="tab1" name="tab-group" checked>
+          <label for="tab1" class="tabs__label">Impact</label>
+          <div class="tabs__content">
+            <div class="panels-container">
+              <details class="panel" name="features" open>
+                <summary class="panel__title">
                   <span>Financial impact</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <strong>Significantly reduced organizational costs</strong> and demonstrated long-term stability that enabled commercialization.
                 </div>
               </details>
 
-              <details class="expansion-panel" name="features">
-                <summary>
+              <details class="panel" name="features">
+                <summary class="panel__title">
                   <span>Results</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <strong>Centralizes critical processes</strong> improving data consistency, team communication, error margin, and handling times.
                 </div>
               </details>
 
-              <details class="expansion-panel" name="features">
-                <summary>
+              <details class="panel" name="features">
+                <summary class="panel__title">
                   <span>Team collaboration</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <p>Enabled multi-department integration and remote access to the main management tool.</p>
                 </div>
               </details>
             </div>
           </div>
-          <input type="radio" id="tab2" name="tab-group">
-          <label for="tab2" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div class="expansion-panels">
-              <details class="expansion-panel" name="tech" open>
-                <summary>
+          <input class="tabs__field" type="radio" id="tab2" name="tab-group">
+          <label for="tab2" class="tabs__label">Stack</label>
+          <div class="tabs__content">
+            <div class="panels-container">
+              <details class="panel" name="tech" open>
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Vue.js (v2)</li>
                     <li>Vuetify</li>
@@ -130,12 +130,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="tech">
-                <summary>
+              <details class="panel" name="tech">
+                <summary class="panel__title">
                   <span>Back-End and Database</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -150,9 +150,9 @@
             </div>
           </div>
 
-          <input type="radio" id="tab3" name="tab-group">
-          <label for="tab3" class="tab-label">Links</label>
-          <div class="tab-content">
+          <input class="tabs__field" type="radio" id="tab3" name="tab-group">
+          <label for="tab3" class="tabs__label">Links</label>
+          <div class="tabs__content">
             <p class="alert">Mantra now belongs to Microfilms Center</p>
           </div>
         </div>
@@ -160,22 +160,22 @@
     </section>
 
     <section id="projects" class="section section_grid" style="--project-color: #BC5536;">
-      <div class="title-container">
+      <div class="section__header">
         <h2 class="section__title">Projects</h2>
         <p class="section__subtitle">Side projects</p>
       </div>
       <div id="projects-images" class="section__container section__container_relative section__container_sm">
         <div class="mockup-container mockup-container_selected" data-project-index="0" data-project-color="#BC5536" style="z-index: 3;">
-          <img class="mockup mockup_mobile" src="assets/luthen_mobile_1.webp" alt="Luthen mobile view: login screen">
-          <img class="mockup mockup_desktop" src="assets/luthen_desktop_1.webp" alt="Luthen desktop view: charts and tables">
+          <img class="mockup mockup_mobile" src="assets/img/projects/luthen_mobile_1.webp" alt="Luthen mobile view: login screen">
+          <img class="mockup mockup_desktop" src="assets/img/projects/luthen_desktop_1.webp" alt="Luthen desktop view: charts and tables">
         </div>
         <div class="mockup-container" data-project-index="1" data-project-color="#202020" style="transform: rotate(-2deg); z-index: 2;">
-          <img class="mockup mockup_mobile" src="assets/lighthouse_mobile.webp" alt="Lighthouse mobile: habits radar chart">
-          <img class="mockup mockup_desktop" src="assets/lighthouse_desktop.webp" alt="Lighthouse desktop: records table and radar chart">
+          <img class="mockup mockup_mobile" src="assets/img/projects/lighthouse_mobile.webp" alt="Lighthouse mobile: habits radar chart">
+          <img class="mockup mockup_desktop" src="assets/img/projects/lighthouse_desktop.webp" alt="Lighthouse desktop: records table and radar chart">
         </div>
         <div class="mockup-container" data-project-index="2" data-project-color="#3de" style="transform: rotate(-4deg); z-index: 1;">
-          <img class="mockup mockup_mobile" src="assets/pensive_mobile.webp" alt="Pensive mobile: registration form">
-          <img class="mockup mockup_desktop" src="assets/pensive_desktop.webp" alt="Pensive desktop: registration form reference">
+          <img class="mockup mockup_mobile" src="assets/img/projects/pensive_mobile.webp" alt="Pensive mobile: registration form">
+          <img class="mockup mockup_desktop" src="assets/img/projects/pensive_desktop.webp" alt="Pensive desktop: registration form reference">
         </div>
       </div>
 
@@ -191,17 +191,17 @@
             Pensive
           </li>
         </ul>
-        <div id="projects-tabs" class="tabs-container">
-          <input type="radio" id="project-tab1" name="projects-tabs" checked>
-          <label for="project-tab1" class="tab-label">Stack</label>
-          <div class="tab-content">
-            <div id="expansion-panels" class="expansion-panels">
-              <details class="expansion-panel" name="projects-tech" open data-project-index="0">
-                <summary>
+        <div id="projects-tabs" class="tabs">
+          <input class="tabs__field" type="radio" id="project-tab1" name="projects-tabs" checked>
+          <label for="project-tab1" class="tabs__label">Stack</label>
+          <div class="tabs__content">
+            <div id="panels-container" class="panels-container">
+              <details class="panel" name="projects-tech" open data-project-index="0">
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Vue.js (v3)</li>
                     <li>Composition API</li>
@@ -212,12 +212,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="0">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="0">
+                <summary class="panel__title">
                   <span>Back-End and Database</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -226,12 +226,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="1" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="1" style="display: none;">
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>React.js</li>
                     <li>Vite</li>
@@ -241,12 +241,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="1" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="1" style="display: none;">
+                <summary class="panel__title">
                   <span>Back-End and Database</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -256,12 +256,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="2" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="2" style="display: none;">
+                <summary class="panel__title">
                   <span>Front-End</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Vue.js (v3)</li>
                     <li>Composition API</li>
@@ -272,12 +272,12 @@
                 </div>
               </details>
 
-              <details class="expansion-panel" name="projects-tech" data-project-index="2" style="display: none;">
-                <summary>
+              <details class="panel" name="projects-tech" data-project-index="2" style="display: none;">
+                <summary class="panel__title">
                   <span>Back-End and Database</span>
-                  <svg class="icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  <svg class="panel__icon" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </summary>
-                <div class="content">
+                <div class="panel__content">
                   <ul>
                     <li>Node.js</li>
                     <li>Express.js</li>
@@ -291,9 +291,9 @@
             </div>
           </div>
 
-          <input type="radio" id="project-tab2" name="projects-tabs">
-          <label for="project-tab2" class="tab-label">Links</label>
-          <div class="tab-content">
+          <input class="tabs__field" type="radio" id="project-tab2" name="projects-tabs">
+          <label for="project-tab2" class="tabs__label">Links</label>
+          <div class="tabs__content">
             <ul id="link-container">
               <li data-project-index="0">
                 <a target="_blank" href="https://github.com/eparuchopalma/luthen-ui.git" class="link link_github">Front-End Code</a>
