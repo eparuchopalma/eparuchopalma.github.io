@@ -15,27 +15,38 @@
 <body id="body" class="body body_dark">
   <main class="main">
 
-    <button id="theme-button" class="theme-button theme-button_dark" aria-label="tema" title="Tema"></button>
-
-    <header class="header">
-      <h1 class="headline">
-        <span class="headline__label headline__label_left">EDGAR</span>
-        PARUCHO
-        <span class="headline__label headline__label_right">PALMA</span>
-      </h1>
-      <strong class="subtitle subtitle_animated">Full Stack Developer</strong>
-      <p class="header__paragraph">I build high-performance, visually attractive websites and web applications.</p>
-      <div class="cta-container">
-        <a class="cta cta_secondary" href="#projects">Projects</a>
-        <a class="cta cta_primary" href="#contact">Contact</a>
-        <a class="language-link" href="./index.html">View Spanish version</a>
+    
+    <header class="section section_grid">
+      <div class="section__header">
+        <button
+        id="theme-button"
+        class="theme-button theme-button_dark"
+        aria-label="theme"
+        title="Theme"></button>
       </div>
-      <picture class="picture">
-        <source media="(min-width: 576px)" srcset="assets/img/author.webp">
-        <img
-        src="assets/img/author_sm.webp"
-        alt="Portrait of the author, a man of white skin with short dark hair, wearing a grey sweater.">
-      </picture>
+      <div class="section__container">
+        <h1 class="headline">
+          <span class="headline__label headline__label_left">EDGAR</span>
+          PARUCHO
+          <span class="headline__label headline__label_right">PALMA</span>
+        </h1>
+        <strong class="subtitle subtitle_animated">Full Stack Developer</strong>
+        <p class="header__paragraph">I build high-performance, visually attractive websites and web applications.</p>
+        <div class="cta-container">
+          <a class="cta cta_secondary" href="#projects">Projects</a>
+          <a class="cta cta_primary" href="#contact">Contact</a>
+          <a class="language-link" href="./index.html">View Spanish version</a>
+        </div>
+      </div>
+      <div class="section__container">
+        <picture class="picture-container">
+          <source media="(min-width: 576px)" srcset="assets/img/author.webp">
+          <img
+          class="picture"
+          src="assets/img/author_sm.webp"
+          alt="Portrait of the author, a man of white skin with short dark hair, wearing a grey sweater.">
+        </picture>
+      </div>
     </header>
 
     <section class="section section_grid" style="--project-color: #41B883;">

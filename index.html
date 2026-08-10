@@ -15,29 +15,40 @@
 <body id="body" class="body body_dark">
   <main class="main">
 
-    <button id="theme-button" class="theme-button theme-button_dark" aria-label="tema" title="Tema"></button>
-
-    <header class="header">
-      <h1 class="headline">
-        <span class="headline__label headline__label_left">EDGAR</span>
-        PARUCHO
-        <span class="headline__label headline__label_right">PALMA</span>
-      </h1>
-      <strong class="subtitle subtitle_animated">Desarrollador Full Stack</strong>
-      <p class="header__paragraph">
-        Construyo sitios y aplicaciones web de alto rendimiento y visualmente atractivos.
-      </p>
-      <div class="cta-container">
-        <a class="cta cta_secondary" href="#projects">Proyectos</a>
-        <a class="cta cta_primary" href="#contact">Contacto</a>
-        <a class="language-link" href="./index_en.html">English version here</a>
+    
+    <header class="section section_grid">
+      <div class="section__header">
+        <button
+        id="theme-button"
+        class="theme-button theme-button_dark"
+        aria-label="tema"
+        title="Tema"></button>
       </div>
-      <picture class="picture">
-        <source media="(min-width: 576px)" srcset="assets/img/author.webp">
-        <img
-        src="assets/img/author_sm.webp"
-        alt="Foto del autor: de piel blanca, cabello corto y oscuro, usa sueter gris claro.">
-      </picture>
+      <div class="section__container">
+        <h1 class="headline">
+          <span class="headline__label headline__label_left">EDGAR</span>
+          PARUCHO
+          <span class="headline__label headline__label_right">PALMA</span>
+        </h1>
+        <strong class="subtitle subtitle_animated">Desarrollador Full Stack</strong>
+        <p class="header__paragraph">
+          Construyo sitios y aplicaciones web de alto rendimiento y visualmente atractivos.
+        </p>
+        <div class="cta-container">
+          <a class="cta cta_secondary" href="#projects">Proyectos</a>
+          <a class="cta cta_primary" href="#contact">Contacto</a>
+          <a class="language-link" href="./index_en.html">English version here</a>
+        </div>
+      </div>
+      <div class="section__container">
+        <picture class="picture-container">
+          <source media="(min-width: 576px)" srcset="assets/img/author.webp">
+          <img
+          class="picture"
+          src="assets/img/author_sm.webp"
+          alt="Foto del autor: de piel blanca, cabello corto y oscuro, usa sueter gris claro.">
+        </picture>
+      </div>
     </header>
 
     <section class="section section_grid" style="--project-color: #41B883;">
