@@ -45,6 +45,7 @@ img {
 }
 
 .body {
+  height: 100vh;
   background-color: var(--bg-color);
   transition: color, background-color .5s;
   display: grid;
@@ -415,7 +416,7 @@ img {
 .tabs {
   width: 100%;
   padding-top: 12px;
-  height: calc(100% - 60px);
+  height: calc(100% - 70px);
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -588,7 +589,7 @@ img {
   .picture {
     margin: 12px 0 0 12px;
     align-self: center;
-    max-height: 90vh;
+    max-height: 640px;
     grid-row: 1 / 5;
     grid-column: 2 / 3;
     aspect-ratio: 3 / 4;
