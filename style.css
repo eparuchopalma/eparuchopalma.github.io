@@ -62,7 +62,7 @@ img {
 }
 
 .main {
-  height: 100vh;
+  height: 100dvh;
   padding: 0 12px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -100,7 +100,7 @@ img {
 }
 
 .header {
-  height: 100vh;
+  height: 100dvh;
   display: grid;
   text-align: center;
   scroll-snap-align: start;
@@ -180,7 +180,7 @@ img {
 
 .picture {
   height: 100%;
-  max-height: 45vh;
+  max-height: 45dvh;
   border-radius: 2px;
   justify-self: center;
   position: relative;
@@ -209,7 +209,7 @@ img {
 
 .section {
   --project-color: var(--accent);
-  height: 100vh;
+  height: 100dvh;
   margin: 20px 0;
   scroll-snap-align: start;
 }
@@ -225,7 +225,7 @@ img {
 
 .section__header {
   width: 100%;
-  height: 9vh;
+  height: 9dvh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -239,9 +239,9 @@ img {
 }
 
 .section__subtitle { margin-bottom: 6px; }
-.section__container { height: 45vh; }
-.section__container_sm { height: 40vh; }
-.section__container_lg { height: 50vh; }
+.section__container { height: 45dvh; }
+.section__container_sm { height: 40dvh; }
+.section__container_lg { height: 50dvh; }
 .section__container_relative { position: relative; }
 
 .carousel {
@@ -358,10 +358,11 @@ img {
   text-align: center;
   transition: all .3s;
   color: #8888;
+  background-color: var(--accent);
+  border: 1px solid var(--bg-color);
 }
 
 .project-title_selected {
-  background-color: var(--accent);
   color: var(--font-color);
   font-size: 2rem;
   position: relative;
@@ -576,7 +577,7 @@ img {
   .picture {
     margin: 12px 0 0 12px;
     align-self: center;
-    max-height: 90vh;
+    max-height: 90dvh;
     grid-row: 1 / 5;
     aspect-ratio: 3 / 4;
   }
@@ -610,7 +611,7 @@ img {
   .picture {
     margin: 12px 0 0 12px;
     align-self: center;
-    max-height: 90vh;
+    max-height: 90dvh;
     grid-row: 1 / 5;
     aspect-ratio: 3 / 4;
   }
@@ -623,12 +624,12 @@ img {
   }
 
   .section__header {
-    height: 16vh;
+    height: 16dvh;
     grid-column: 1 / 3;
   }
 
   .section__container {
-    height: 84vh;
+    height: 84dvh;
     padding-top: 6px;
   }
 
@@ -673,7 +674,7 @@ img {
   }
 
   .section__container {
-    height: 60vh;
+    height: 60dvh;
     align-self: center;
   }
 
