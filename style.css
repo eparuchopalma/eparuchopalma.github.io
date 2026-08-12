@@ -69,6 +69,7 @@ img {
   width: 100%;
   max-width: 1350px;
   height: 100%;
+  padding: 12px;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
@@ -232,6 +233,7 @@ img {
   height: 100%;
   margin: 20px auto;
   scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .section_centered {
@@ -267,6 +269,11 @@ img {
 }
 
 .section__container_relative { position: relative; }
+
+.section__container_flex {
+  display: flex;
+  flex-direction: column;
+}
 
 .carousel {
   width: 100%;
@@ -381,7 +388,6 @@ img {
 .project-title {
   margin: 0 auto;
   width: 100%;
-  max-width: 400px;
   text-align: center;
   transition: all .3s;
   color: #8888;
@@ -426,7 +432,7 @@ img {
 .tabs {
   width: 100%;
   padding-top: 12px;
-  height: calc(100% - 70px);
+  height: calc(100% - 100px);
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -583,7 +589,7 @@ img {
 
 @media (orientation: landscape) {
 
-  .theme-button { left: 12px; }
+  .theme-button { margin-right: auto; }
 
   .link { min-width: 420px; }
 
@@ -609,6 +615,11 @@ img {
     height: 90%;
     padding: 6px;
     margin: 0;
+  }
+
+  .section__container_flex {
+    flex-direction: column-reverse;
+    justify-content: space-between;
   }
 
   .tabs { padding-bottom: 6px; }
